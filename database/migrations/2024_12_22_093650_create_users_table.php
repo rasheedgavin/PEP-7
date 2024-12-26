@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->boolean('isAdmin')->default(false);
-            $table->unsignedBigInteger('section_id');
+            $table->unsignedBigInteger('section_id')->nullable()->default(1);
             $table->string('student_id_number');
             $table->timestamps();
 

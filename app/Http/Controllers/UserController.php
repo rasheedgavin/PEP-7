@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Section;
 use Illuminate\Http\Request;
+
 
 class UserController extends Controller
 {
@@ -20,7 +22,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $sections = Section::all();
+        return view('users.create', compact('sections'));
     }
 
     /**
@@ -28,7 +31,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users,email',
+        'isAdmin' => 'required|boolean',
+        'section_id' => 'required|exists:sections,id',
+        'student_id_number' => 'required|string|max:255', ]);
+
+        User::create($request->all());
+
+        return redirect()->route('users.create')->with('success', 'User created successfully!');
     }
 
     /**
