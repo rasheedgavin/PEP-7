@@ -13,11 +13,11 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->boolean('isAdmin')->default(false);
-            $table->unsignedBigInteger('section_id')->nullable()->default(1);
+            $table->unsignedBigInteger('section_id')->nullable()->default(1); // Ensure section_id allows NULL or has a default value
             $table->string('student_id_number');
             $table->timestamps();
 
-            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
+            // $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
         });
     }
 

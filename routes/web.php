@@ -30,6 +30,7 @@ Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.
 Route::middleware(['auth'])->group(function () {
     Route::get('/hangman', [HangmanController::class, 'index'])->name('hangman.index');
     Route::post('/hangman', [HangmanController::class, 'store'])->name('hangman.store');
+});
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/text-twister', [TextTwisterController::class, 'index'])->name('text-twister.index');

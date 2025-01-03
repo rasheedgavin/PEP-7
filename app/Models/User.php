@@ -15,6 +15,8 @@ class User extends Authenticatable
         'name', 'email', 'isAdmin', 'section_id', 'student_id_number'
     ];
 
+    protected $casts = [ 'email_verified_at' => 'datetime', ];
+
     public function section(): BelongsTo
     {
         return $this->belongsTo(Section::class);
