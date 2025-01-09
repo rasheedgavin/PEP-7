@@ -40,5 +40,17 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/interactive-novel', [InteractiveNovelController::class, 'store'])->name('interactive-novel.store');
 });
 
+Route::get('/games/hangman', function () {
+    return view('games.hangman');
+})->name('games.hangman');
+
+Route::get('/games/interactive-novel', function () {
+    return view('games.interactive-novel');
+})->name('games.interactive-novel');
+
+Route::get('/games/text-twister', function () {
+    return view('games.text-twister');
+})->name('games.text-twister');
+
 
 require __DIR__.'/auth.php';
