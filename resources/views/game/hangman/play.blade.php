@@ -6,139 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Hangman Platformer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/hangman.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        .text-gold {
-            color: #F4D03F;
-        }
-        .bg-header-gradient {
-            background: linear-gradient(to right, #1e1e1e, #3b2f2f);
-        }
-        .bg-footer-gradient {
-            background: linear-gradient(to left, #3b2f2f, #1e1e1e);
-        }
-        .bg-body-gradient {
-            background: linear-gradient(to bottom, #5c4033, #3b2f2f);
-        }
-        .text-cream {
-            color: #F8F1E8;
-        }
-        .btn-gradient {
-            background: linear-gradient(to right, #F4D03F, #8B5E3C);
-            box-shadow: 0 0 10px rgba(244, 208, 63, 0.6);
-            transition: transform 0.2s ease, box-shadow 0.3s ease;
-        }
-        .btn-gradient:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(244, 208, 63, 0.9);
-        }
-        body {
-            font-family: 'Cinzel', serif;
-            background: linear-gradient(to bottom, #5c4033, #3b2f2f);
-            color: #F8F1E8;
-            text-align: center;
-            min-height: 100vh;
-        }
-
-        #game-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        canvas {
-            width: 100%;
-            height: auto;
-            border: 2px solid #F4D03F;
-            background: linear-gradient(to bottom, #8B5E3C, #5C4033);
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(244, 208, 63, 0.6);
-        }
-
-        #alphabet-container .letter {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 15px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
-            background: linear-gradient(to bottom, #F4D03F, #8B5E3C);
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        #alphabet-container .letter:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 10px rgba(244, 208, 63, 0.9);
-        }
-
-        #alphabet-container .letter.disabled {
-            pointer-events: none;
-            background: #3b2f2f;
-            color: #ddd;
-        }
-
-        #lives, #score {
-            margin: 1rem 0;
-            font-size: 18px;
-        }
-
-        .btn-gradient {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #fff;
-            border: none;
-            background: linear-gradient(to right, #F4D03F, #8B5E3C);
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(244, 208, 63, 0.6);
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-gradient:hover {
-            transform: scale(1.1);
-            box-shadow: 0 10px 20px rgba(244, 208, 63, 0.9);
-        }
-
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-        }
-
-        .popup #next-btn {
-            margin-top: 1rem;
-        }
-    </style>
 </head>
 <body>
     <div class="absolute top-4 left-4 fade-in">
@@ -154,6 +23,11 @@
     <header class="bg-header-gradient py-4 fade-in">
         <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Hangman Platformer</h1>
         <p class="text-cream text-lg italic mt-2">Category: {{ $category }} | Level: {{ $level }}</p>
+        <div class="mt-4 flex justify-center space-x-4">
+            <button onclick="window.location.href='{{ route('hangman.levels', compact('category')) }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
+                Levels
+            </button>
+        </div>
     </header>
     
     <div id="game-container" class="fade-in">

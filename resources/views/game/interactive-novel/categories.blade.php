@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman Categories</title>
+    <title>Interactive Novels Categories</title>
     <style>
         .categories {
             display: flex;
@@ -40,7 +40,6 @@
     </div>    
     <script>
         function handleCategory(category) {
-            // window.location.href = `/hangman/${category}`;
             window.location.href = `interactive-novel/${category}`;
         }
     </script>
