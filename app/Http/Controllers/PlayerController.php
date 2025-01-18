@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Player;
 use App\Models\Score;
+use App\Models\Progress;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,16 +26,14 @@ class PlayerController extends Controller
 
     public function store(Request $request)
     {
-        // Validate the request data
         $validated = $request->validate([
             'username' => 'required|string|max:255',
             'year_level' => 'required|integer',
             'section' => 'required|string|max:255',
         ]);
 
-        // Create a new player
         $player = new Player();
-        $player->user_id = Auth::id(); // Assuming the player is related to an authenticated user
+        $player->user_id = Auth::id();
         $player->username = $validated['username'];
         $player->year_level = $validated['year_level'];
         $player->section = $validated['section'];
@@ -47,6 +46,34 @@ class PlayerController extends Controller
         $score->text_twister_score = 0;
         $score->interactive_novel_score = 0;
         $score->save();
+
+        $progress = new Progress();
+        $progress->player_id = $player->id;
+        $progress->hangman_easy_complete = false;
+        $progress->hangman_medium_complete = false;
+        $progress->hangman_hard_complete = false;
+        $progress->hangman_easy_level = 0;
+        $progress->hangman_medium_level = 0;
+        $progress->hangman_hard_level = 0;
+        $progress->text_twister_easy_complete = false;
+        $progress->text_twister_medium_complete = false;
+        $progress->text_twister_hard_complete = false;
+        $progress->text_twister_easy_level = 0;
+        $progress->text_twister_medium_level = 0;
+        $progress->text_twister_hard_level = 0;
+        $progress->interactive_novel_easy_complete = false;
+        $progress->interactive_novel_medium_complete = false;
+        $progress->interactive_novel_hard_complete = false;
+        $progress->interactive_novel_easy_level = 0;
+        $progress->interactive_novel_medium_level = 0;
+        $progress->interactive_novel_hard_level = 0;
+        $progress->save();
+
+        // $hangmanLevelCompleted = $progress->hangman_easy_level + $progress->hangman_medium_level + $progress->hangman_hard_level;
+        // $textTwisterLevelCompleted = $progress->text_twister_easy_level + $progress->text_twister_medium_level + $progress->text_twister_hard_level;
+        // $interactiveNovelCompleted = $progress->interactive_novel_easy_level + $progress->interactive_novel_medium_level + $progress->interacive_novel_hard_level;
+        // $overallLevelCompleted = $hangmanLevelCompleted + $textTwisterLevelCompleted + $interactiveNovelCompleted;
+
 
         return redirect()->route('dashboard')->with('success', 'Player profile created successfully.');
     }
@@ -70,10 +97,4 @@ class PlayerController extends Controller
         return redirect()->route('dashboard')->with('success', 'Player profile updated successfully.');
     }
 
-    // public function destroy($id)
-    // {
-    //     $player = Player::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
-    //     $player->delete();
-    //     return redirect()->route('dashboard')->with('success', 'Player profile deleted successfully.');
-    // }
 }

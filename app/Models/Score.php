@@ -20,6 +20,6 @@ class Score extends Model
 
     public function players(): BelongsTo
     {
-        return $this->belonsTo(Player::class, 'player_id');
+        return $this->belongsTo(Player::class, 'player_id');
     }
 }

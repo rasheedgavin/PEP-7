@@ -28,4 +28,9 @@ class Player extends Model
     {
         return $this->hasOne(Score::class, 'player_id');
     }
+
+    public function progress(): HasOne
+    {
+        return $this->hasOne(Progress::class, 'player_id');
+    }
 }
