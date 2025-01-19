@@ -67,17 +67,13 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px; /* Optional: Rounded corners for better appearance */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
-            z-index: 100;
-            width: 300px; /* Optional: Set a width for better alignment */
-            text-align: center; /* Center text within the popup */
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
         }
-
-
         .popup #next-btn {
             margin-top: 1rem;
         }

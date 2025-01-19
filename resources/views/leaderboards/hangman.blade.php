@@ -78,13 +78,13 @@
             <p class="text-cream text-lg italic mt-2">Show off your skills and climb the ranks!</p>
         </div>
         <div class="mt-4 flex justify-center space-x-4">
-            <button onclick="window.location.href='{{ route('leaderboards.overall') }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
+            <button onclick="window.location.href='{{ route('leaderboards.overall', compact('id')) }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
                 Overall
             </button>
-            <button onclick="window.location.href='{{ route('leaderboards.text-twister') }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
+            <button onclick="window.location.href='{{ route('leaderboards.text-twister', compact('id')) }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
                 Text Twister
             </button>
-            <button onclick="window.location.href='{{ route('leaderboards.interactive-novel') }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
+            <button onclick="window.location.href='{{ route('leaderboards.interactive-novel', compact('id')) }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
                 Interactive Novel
             </button>
         </div>

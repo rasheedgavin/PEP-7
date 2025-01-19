@@ -77,18 +77,26 @@
             <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Leaderboards</h1>
             <p class="text-cream text-lg italic mt-2">Show off your skills and climb the ranks!</p>
             <div class="mt-4 flex justify-center space-x-4">
-                <button onclick="window.location.href='{{ route('leaderboards.hangman') }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
+                <button onclick="window.location.href='{{ route('leaderboards.hangman', compact('id')) }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
                     Hangman
                 </button>
-                <button onclick="window.location.href='{{ route('leaderboards.text-twister') }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
+                <button onclick="window.location.href='{{ route('leaderboards.text-twister', compact('id')) }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
                     Text Twister
                 </button>
-                <button onclick="window.location.href='{{ route('leaderboards.interactive-novel') }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
+                <button onclick="window.location.href='{{ route('leaderboards.interactive-novel', compact('id')) }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
                     Interactive Novel
                 </button>
             </div>
         </div>
     </header>
+
+    <div>
+        @foreach ($players as $player)
+            @if ($player->username == $activePlayer->username)
+                <span>Your current ranking is {{$player->rank}}</span>
+            @endif
+        @endforeach
+    </div>
 
     <!-- Leaderboard Table -->
     <main class="container mx-auto px-6 py-12">
@@ -101,27 +109,29 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($players as $player)
-                    <tr>
-                        <td class="
-                            @if($player->rank == 1) rank-gold
-                            @elseif($player->rank == 2) rank-silver
-                            @elseif($player->rank == 3) rank-bronze
-                            @else rank-normal
-                            @endif
-                        ">
-                            {{ $player->rank }}
-                            @if($player->rank == 1)
-                                <span class="medal">🥇</span>
-                            @elseif($player->rank == 2)
-                                <span class="medal">🥈</span>
-                            @elseif($player->rank == 3)
-                                <span class="medal">🥉</span>
-                            @endif
-                        </td>
-                        <td>{{ $player->username }}</td>
-                        <td>{{ $player->score ?? 'No Score' }}</td>
-                    </tr>
+                @foreach ($players as $player)
+                    @if ($player->rank <= 10)
+                        <tr>
+                            <td class="
+                                @if($player->rank == 1) rank-gold
+                                @elseif($player->rank == 2) rank-silver
+                                @elseif($player->rank == 3) rank-bronze
+                                @else rank-normal
+                                @endif
+                            ">
+                                {{ $player->rank }}
+                                @if($player->rank == 1)
+                                    <span class="medal">🥇</span>
+                                @elseif($player->rank == 2)
+                                    <span class="medal">🥈</span>
+                                @elseif($player->rank == 3)
+                                    <span class="medal">🥉</span>
+                                @endif
+                            </td>
+                            <td>{{ $player->username }}</td>
+                            <td>{{ $player->score ?? 'No Score' }}</td>
+                        </tr>
+                    @endif
                 @endforeach
             </tbody>
         </table>

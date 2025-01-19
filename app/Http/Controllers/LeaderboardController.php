@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 
 class LeaderboardController extends Controller
 {
-    public function viewOverallScore()
+    public function viewOverallScore($id)
     {
+        $activePlayer = Player::with('users')->findOrFail($id);
+        $id = $activePlayer->id;
         $players = Player::with('scores')->get();
 
         foreach ($players as $player) {
@@ -26,11 +28,13 @@ class LeaderboardController extends Controller
             $player->rank = $rank++;
         }
 
-        return view('leaderboards.overall', compact('players'));
+        return view('leaderboards.overall', compact('players', 'activePlayer', 'id'));
     }
     
-    public function viewHangmanScore()
+    public function viewHangmanScore($id)
     {
+        $activePlayer = Player::with('users')->findOrFail($id);
+        $id = $activePlayer->id;
         $players = Player::with('scores')->get();
 
         foreach ($players as $player) {
@@ -48,11 +52,13 @@ class LeaderboardController extends Controller
             $player->rank = $rank++;
         }
 
-        return view('leaderboards.hangman', compact('players'));
+        return view('leaderboards.hangman', compact('players', 'activePlayer', 'id'));
     }
 
-    public function viewTextTwisterScore()
+    public function viewTextTwisterScore($id)
     {
+        $activePlayer = Player::with('users')->findOrFail($id);
+        $id = $activePlayer->id;
         $players = Player::with('scores')->get();
 
         foreach ($players as $player) {
@@ -70,11 +76,13 @@ class LeaderboardController extends Controller
             $player->rank = $rank++;
         }
 
-        return view('leaderboards.text-twister', compact('players'));
+        return view('leaderboards.text-twister', compact('players', 'activePlayer', 'id'));
     }
 
-    public function viewInteractiveNovelScore()
+    public function viewInteractiveNovelScore($id)
     {
+        $activePlayer = Player::with('users')->findOrFail($id);
+        $id = $activePlayer->id;
         $players = Player::with('scores')->get();
 
         foreach ($players as $player) {
@@ -92,6 +100,6 @@ class LeaderboardController extends Controller
             $player->rank = $rank++;
         }
 
-        return view('leaderboards.interactive-novel', compact('players'));
+        return view('leaderboards.interactive-novel', compact('players', 'activePlayer', 'id'));
     }
 }

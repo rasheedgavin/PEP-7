@@ -10,7 +10,8 @@ class DashboardController extends Controller
     public function index()
     {
         $player = Player::where('user_id', Auth::id())->first();
-        return view('dashboard', compact('player'));
+        $id = $player->id;
+        return view('dashboard', compact('id'));
     }
 }
 
