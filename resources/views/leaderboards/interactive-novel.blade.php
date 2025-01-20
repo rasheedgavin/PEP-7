@@ -59,26 +59,28 @@
             </thead>
             <tbody>
                 @foreach($players as $player)
-                    <tr>
-                        <td class="
-                            @if($player->rank == 1) rank-gold
-                            @elseif($player->rank == 2) rank-silver
-                            @elseif($player->rank == 3) rank-bronze
-                            @else rank-normal
-                            @endif
-                        ">
-                            {{ $player->rank }}
-                            @if($player->rank == 1)
-                                <span class="medal">🥇</span>
-                            @elseif($player->rank == 2)
-                                <span class="medal">🥈</span>
-                            @elseif($player->rank == 3)
-                                <span class="medal">🥉</span>
-                            @endif
-                        </td>
-                        <td>{{ $player->username }}</td>
-                        <td>{{ $player->scores->interactive_novel_score ?? 'No Score' }}</td>
-                    </tr>
+                    @if ($player->rank <= 10)
+                        <tr>
+                            <td class="
+                                @if($player->rank == 1) rank-gold
+                                @elseif($player->rank == 2) rank-silver
+                                @elseif($player->rank == 3) rank-bronze
+                                @else rank-normal
+                                @endif
+                            ">
+                                {{ $player->rank }}
+                                @if($player->rank == 1)
+                                    <span class="medal">🥇</span>
+                                @elseif($player->rank == 2)
+                                    <span class="medal">🥈</span>
+                                @elseif($player->rank == 3)
+                                    <span class="medal">🥉</span>
+                                @endif
+                            </td>
+                            <td>{{ $player->username }}</td>
+                            <td>{{ $player->scores->interactive_novel_score ?? 'No Score' }}</td>
+                        </tr>
+                    @endif
                 @endforeach
             </tbody>
         </table>
