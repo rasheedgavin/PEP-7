@@ -7,7 +7,7 @@
     <title>PEP 7</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body class="bg-body-gradient text-cream min-h-screen flex flex-col justify-between">
 
@@ -93,7 +93,7 @@
 
     <footer class="bg-footer-gradient py-6">
         <div class="container mx-auto text-center">
-            <p class="text-gold">&copy; 2025 PEP SEVEN. Designed with passion and creativity.</p>
+            <p class="text-gold">&copy; 2025 PEP SEVEN.</p>
         </div>
     </footer>
 </body>
