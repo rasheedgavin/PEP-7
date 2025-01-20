@@ -103,7 +103,7 @@
     <main class="flex-grow flex flex-col items-center text-center px-6 py-12 fade-in">
         <div class="relative">
             @if($player->profile_picture)
-                <img src="{{ asset('storage/profile_pictures/' . $player->profile_picture) }}" alt="Profile Picture" width="100" height="100"class="w-36 h-36 rounded-full profile-picture mb-4">
+                <img src="{{ asset($player->profile_picture) }}" alt="Profile Picture" width="300" height="300"class="w-36 h-36 rounded-full profile-picture mb-4">
             @else
                 <img src="{{ asset('storage/default-avatar.png') }}" alt="Default Avatar" width="100" height="100" class="w-36 h-36 rounded-full profile-picture mb-4">
             @endif  

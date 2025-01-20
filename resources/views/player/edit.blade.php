@@ -8,10 +8,10 @@
 <body>
     <div class="form-container">
         <h1>Edit Profile</h1>
-        <form action="{{ route('players.update', $player->id) }}" method="POST">
+        <form action="{{ route('players.update', $player->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
-            
+
             <label for="profile_picture">Profile Picture:</label>
             <input type="file" name="profile_picture" id="profile_picture" accept="image/*">
 
