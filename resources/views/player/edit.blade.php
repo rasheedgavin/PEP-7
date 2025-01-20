@@ -11,6 +11,10 @@
         <form action="{{ route('players.update', $player->id) }}" method="POST">
             @csrf
             @method('PATCH')
+            
+            <label for="profile_picture">Profile Picture:</label>
+            <input type="file" name="profile_picture" id="profile_picture" accept="image/*">
+
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" value="{{ $player->username }}" required>
 

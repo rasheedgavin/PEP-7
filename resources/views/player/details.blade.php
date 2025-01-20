@@ -75,7 +75,6 @@
 </head>
 <body class="bg-dark-brown text-cream flex flex-col">
 
-    <!-- Back Button (Top Left) -->
     <div class="absolute top-4 left-4 fade-in">
         <button onclick="window.location='{{ route('dashboard') }}'"
             class="bg-header-gradient text-gold py-2 px-4 rounded-full shadow-lg flex items-center space-x-2 transition">
@@ -86,7 +85,6 @@
         </button>
     </div>
 
-    <!-- Account Button (Top Right) -->
     <div class="absolute top-4 right-4 fade-in">
         <button onclick="window.location='{{ route('profile.edit') }}'"
             class="bg-header-gradient text-gold py-2 px-4 rounded-full shadow-lg flex items-center space-x-2 transition">
@@ -97,24 +95,22 @@
         </button>
     </div>
 
-    <!-- Header -->
     <header class="bg-header-gradient shadow-lg py-8 text-center fade-in">
         <h1 class="text-gold text-4xl font-bold">Profile Details</h1>
         <p class="text-cream text-lg italic">"See your achievements and profile here."</p>
     </header>
 
-    <!-- Profile Content -->
     <main class="flex-grow flex flex-col items-center text-center px-6 py-12 fade-in">
-        <!-- Profile Picture -->
         <div class="relative">
-            <img id="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture"
-                class="w-36 h-36 rounded-full profile-picture mb-4">
+            @if($player->profile_picture)
+                <img src="{{ asset('storage/profile_pictures/' . $player->profile_picture) }}" alt="Profile Picture" width="100" height="100"class="w-36 h-36 rounded-full profile-picture mb-4">
+            @else
+                <img src="{{ asset('storage/default-avatar.png') }}" alt="Default Avatar" width="100" height="100" class="w-36 h-36 rounded-full profile-picture mb-4">
+            @endif  
         </div>
 
-        <!-- Username -->
         <h2 class="text-gold text-3xl font-bold mt-4">{{ $player->username }}</h2>
 
-        <!-- Edit Button -->
         <div class="mt-4">
             <button onclick="window.location='{{ route('players.edit', ['id' => $player->id]) }}'"
                 class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg flex items-center space-x-2">
@@ -132,7 +128,6 @@
             <p class="text-cream text-xl"><strong>Section:</strong> {{ $player->section }}</p>
         </div>
 
-        <!-- Scores Section -->
         <div class="w-full max-w-2xl">
             <h2 class="text-gold text-3xl font-bold border-b border-gold pb-2">Scores</h2>
             <ul class="mt-4 space-y-4 text-xl text-left">
@@ -144,10 +139,9 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-footer-gradient py-6">
         <div class="container mx-auto text-center">
-            <p class="text-gold">&copy; 2025 PEP SEVEN. Designed with passion and creativity.</p>
+            <p class="text-gold">&copy; 2025 PEP SEVEN.</p>
         </div>
     </footer>
 

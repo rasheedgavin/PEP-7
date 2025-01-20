@@ -48,13 +48,23 @@
     </header>
 
     <div class="absolute top-4 left-4 fade-in">
-        <button onclick="window.location='{{ route('players.details', compact('id')) }}'"
-            class="bg-header-gradient text-gold py-2 px-4 rounded-full shadow-lg flex items-center space-x-2 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.209 0 4-1.791 4-4s-1.791-4-4-4-4 1.791-4 4 1.791 4 4 4zm0 2c-3.314 0-6 2.686-6 6h12c0-3.314-2.686-6-6-6z"/>
-            </svg>
-            <span>Profile</span>
-        </button>
+        @if ($id)
+            <button onclick="window.location='{{ route('players.details', compact('id')) }}'"
+                class="bg-header-gradient text-gold py-2 px-4 rounded-full shadow-lg flex items-center space-x-2 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.209 0 4-1.791 4-4s-1.791-4-4-4-4 1.791-4 4 1.791 4 4 4zm0 2c-3.314 0-6 2.686-6 6h12c0-3.314-2.686-6-6-6z"/>
+                </svg>
+                <span>Profile</span>
+            </button>
+        @else
+            <button onclick="window.location='{{ route('players.create') }}'"
+                class="bg-header-gradient text-gold py-2 px-4 rounded-full shadow-lg flex items-center space-x-2 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.209 0 4-1.791 4-4s-1.791-4-4-4-4 1.791-4 4 1.791 4 4 4zm0 2c-3.314 0-6 2.686-6 6h12c0-3.314-2.686-6-6-6z"/>
+                </svg>
+                <span>Create Profile</span>
+            </button>
+        @endif
     </div>
     <main class="container mx-auto px-6 py-12 fade-in">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -11,7 +11,7 @@ class DashboardController extends Controller
     {
         $player = Player::where('user_id', Auth::id())->first();
         $id = $player->id ?? '0';
-        return view('dashboard', compact('id'));
+        return view('dashboard', compact('player', 'id'));
     }
 }
 

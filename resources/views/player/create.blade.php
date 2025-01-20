@@ -10,6 +10,9 @@
         <h1>Profile</h1>
         <form action="{{ route('players.store') }}" method="POST">
             @csrf
+            <label for="profile_picture">Profile Picture:</label>
+            <input type="file" name="profile_picture" id="profile_picture" accept="image/*">
+            
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" required>
 
