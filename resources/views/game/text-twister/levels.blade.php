@@ -73,7 +73,6 @@
         </button>
     </div>
 
-    <!-- Header -->
     <header class="bg-header-gradient shadow-lg py-6 fade-in">
         <div class="container mx-auto px-6 flex flex-col items-center">
             <h1 class="text-gold text-4xl font-extrabold uppercase tracking-wide">
@@ -82,7 +81,6 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-6 py-12 fade-in">
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
             @for ($i = 1; $i <= 10; $i++)
@@ -97,7 +95,6 @@
     </main>
 
 
-    <!-- Footer -->
     <footer class="bg-footer-gradient py-4 fade-in">
         <div class="container mx-auto text-center">
             <p class="text-gold">&copy; 2025 Text Twister. Designed with passion and history.</p>

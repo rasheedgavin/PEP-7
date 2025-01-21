@@ -45,7 +45,7 @@
     </div>
 
     <footer class="bg-footer-gradient py-4 mt-8">
-        <p class="text-gold fade-in">&copy; 2025 Hangman Game. Designed with passion and fun.</p>
+        <p class="text-gold fade-in">&copy; 2025 Hangman Game.</p>
     </footer>
 
     <div id="popup" class="popup">

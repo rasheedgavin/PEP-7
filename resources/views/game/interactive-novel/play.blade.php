@@ -82,8 +82,7 @@
 </head>
 <body>
     <h1>Interactive Novel with Quiz</h1>
-    <button onclick="window.location.href='{{ route('dashboard') }}'">Home</button>
-    <button onclick="window.location.href='{{ route('interactive-novel.levels', compact('category', 'level')) }}'">Back</button>
+    <button onclick="window.location.href='{{ route('dashboard') }}'">Back</button>
 
     <div id="game-container">
         <div id="display-case">

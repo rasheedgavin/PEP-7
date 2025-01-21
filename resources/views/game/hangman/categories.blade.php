@@ -48,7 +48,7 @@
 
     <footer class="bg-footer-gradient py-4 fade-in">
         <div class="container mx-auto text-center">
-            <p class="text-gold">&copy; 2025 Hangman. Designed with passion and history.</p>
+            <p class="text-gold">&copy; 2025 Hangman.</p>
         </div>
     </footer>
 

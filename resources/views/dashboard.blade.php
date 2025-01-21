@@ -93,7 +93,7 @@
                 <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6">
                     <h2 class="text-gold text-3xl font-bold">Interactive Novel</h2>
                     <p class="text-sm text-white mb-4">Sumabak sa isang kapanapanabik na mga kwento at tanong!</p>
-                    <button onclick="window.location='{{ route('hangman.categories') }}'" class="btn-gradient text-dark py-2 px-6 rounded-full">
+                    <button onclick="window.location='{{ route('interactive-novel.categories') }}'" class="btn-gradient text-dark py-2 px-6 rounded-full">
                         Play Now
                     </button>
                 </div>
