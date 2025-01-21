@@ -21,8 +21,10 @@
     </div>
     
     <header class="bg-header-gradient py-4 fade-in">
-        <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Hangman Platformer</h1>
-        <p class="text-cream text-lg italic mt-2">{{ $category }} | Level: {{ $level }}</p>
+        <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Hangman {{ $category }} </h1>
+        <p class="text-cream text-lg italic mt-2">Level {{ $level }}</p>
+        <p class="text-crem text-lg italic mt -2">Score <span class="text-gold font-extrabold">{{ $player->scores->hangman_score }}</span></p>
+        
         <div class="mt-4 flex justify-center space-x-4">
             <button onclick="window.location.href='{{ route('hangman.levels', compact('category')) }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
                 Levels
@@ -41,9 +43,6 @@
         <div id="word-container" class="text-2xl font-bold tracking-widest fade-in"></div>
         <div id="alphabet-container" class="fade-in"></div>
     </div>
-
-    <div id="lives" class="mt-4 fade-in">Lives: 10</div>
-    <div id="score" class="mt-2 fade-in">Score: {{ $player->scores->hangman_score }}</div>
 
     <footer class="bg-footer-gradient py-4 mt-8">
         <p class="text-gold fade-in">&copy; 2025 Hangman Game. Designed with passion and fun.</p>
