@@ -42,7 +42,7 @@
         @foreach ($players as $player)
             @if ($player->username == $activePlayer->username)
                 <p class="text-cream text-xl">
-                    kasalukuyang nasa rangkang <span class="text-gold font-extrabold">{{ $player->rank }}</span>!
+                    rank <span class="text-gold font-extrabold">{{ $player->rank }}</span>! score <span class="text-gold fon-extrabold">{{ $player->scores->text_twister_score }}</span>
                 </p>
             @endif
         @endforeach
