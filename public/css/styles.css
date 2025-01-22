@@ -55,6 +55,30 @@ body {
 .card-overlay {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
 }
+
+.chapter {
+    display: none;
+}
+.chapter.active {
+    display: block;
+}
+
+.buttons-container {
+    position: relative;
+    height: 100%;
+}
+.btn-position {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn-left {
+    left: 1rem;
+}
+.btn-right {
+    right: 1rem;
+}
+
 @media (max-width: 768px) {
     .grid {
         overflow-x: auto;
