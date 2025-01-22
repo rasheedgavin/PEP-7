@@ -1,12 +1,18 @@
-<x-guest-layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Confirm Password</title>
+</head>
+<body>
     <div class="mb-4 text-sm text-gray-600">
         {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
     </div>
 
     <form method="POST" action="{{ route('password.confirm') }}">
         @csrf
-
-        <!-- Password -->
         <div>
             <x-input-label for="password" :value="__('Password')" />
 
@@ -24,4 +30,6 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+
+</body>
+</html>

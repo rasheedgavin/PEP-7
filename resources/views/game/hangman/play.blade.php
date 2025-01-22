@@ -24,7 +24,7 @@
         <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Hangman {{ $category }} </h1>
         <p class="text-cream text-lg italic mt-2">Level {{ $level }}</p>
         <p class="text-crem text-lg italic mt -2">Score <span class="text-gold font-extrabold">{{ $player->scores->hangman_score }}</span></p>
-        
+
         <div class="mt-4 flex justify-center space-x-4">
             <button onclick="window.location.href='{{ route('hangman.levels', compact('category')) }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
                 Levels
@@ -52,6 +52,8 @@
         <div id="popup-content"></div>
         <button id="next-btn" class="btn-gradient">Next Level</button>
     </div>
+
+    <div id="lives" class="hidden">Lives: 10</div>
 
     <script src="{{ asset('js/hangman.js') }}"></script> 
 </body>
