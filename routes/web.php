@@ -7,7 +7,7 @@ use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ScoreController;
 use Illuminate\Support\Facades\Route;
-
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
     return view('welcome');
@@ -45,6 +45,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/increment/hangman/score', [ScoreController::class, 'incrementHangmanScore']);
     Route::post('/increment/text-twister/score', [ScoreController::class, 'incrementTextTwisterScore']);
     Route::post('/increment/interactive-novel/score', [ScoreController::class, 'incrementInteractiveNovelScore']);
+    Route::get('/achievements/view/{id}', [DashboardController::class, 'viewAchievements'])->name('achievements.view');
+    Route::get('/novel/view', [DashboardController::class, 'viewNovel'])->name('novel.view');
 });
 
 require __DIR__.'/auth.php';

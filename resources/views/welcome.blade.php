@@ -131,14 +131,7 @@
             @endauth
         </nav>
     @endif
-
-    <!-- Center Content -->
-    <div class="content">
-        {{-- <h1>Welcome</h1>
-        <h1>to</h1>
-        <h1>PEP7</h1> --}}
-        {{-- <p>Access your account or create a new one to get started.</p> --}}
-    </div>
+    
 </main>
 </body>
 </html>

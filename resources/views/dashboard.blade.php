@@ -29,14 +29,14 @@
                     </svg>
                     <span>Leaderboards</span>
                 </button>
-                <button
+                <button onclick="window.location='{{ route('achievements.view', compact('id')) }}'"
                     class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
                     </svg>
                     <span>Achievements</span>
                 </button>
-                <button 
+                <button onclick="window.location='{{ route('novel.view') }}'"
                     class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M6 4v16h12V4H6zm2 2h8v12H8V6zm-2 0V4h12v2H6zm0 12h12v2H6v-2z"/>

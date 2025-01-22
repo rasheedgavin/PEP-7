@@ -13,5 +13,17 @@ class DashboardController extends Controller
         $id = $player->id ?? '0';
         return view('dashboard', compact('player', 'id'));
     }
+
+    public function viewNovel()
+    {
+        return view('novel');
+    }
+
+    public function viewAchievements($id){
+
+        $player= Player::with('users')->findOrFail($id);
+
+        return  view('achievements', compact('player'));
+    }
 }
 
