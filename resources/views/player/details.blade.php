@@ -103,7 +103,7 @@
     <main class="flex-grow flex flex-col items-center text-center px-6 py-12 fade-in">
         <div class="relative">
             @if($player->profile_picture)
-                <img src="{{ asset($player->profile_picture) }}" alt="Profile Picture" width="300" height="300"class="w-36 h-36 rounded-full profile-picture mb-4">
+                <img src="{{ asset('storage/public/profile_pictures/' . $player->profile_picture) }}" alt="Profile Picture" width="300" height="300"class="w-36 h-36 rounded-full profile-picture mb-4">
             @else
                 <img src="{{ asset('storage/default-avatar.png') }}" alt="Default Avatar" width="100" height="100" class="w-36 h-36 rounded-full profile-picture mb-4">
             @endif  
@@ -112,7 +112,7 @@
         <h2 class="text-gold text-3xl font-bold mt-4">{{ $player->username }}</h2>
 
         <div class="mt-4">
-            <button onclick="window.location='{{ route('players.edit', ['id' => $player->id]) }}'"
+            <button onclick="window.location='{{ route('players.edit', compact('id')) }}'"
                 class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg flex items-center space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M5 2h14c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2zm0 2v16h14V4H5zm4 4h6v2H9V8zm0 4h6v2H9v-2z"/>

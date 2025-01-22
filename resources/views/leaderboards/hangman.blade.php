@@ -42,7 +42,7 @@
         @foreach ($players as $player)
             @if ($player->username == $activePlayer->username)
                 <p class="text-cream text-xl">
-                    rank <span class="text-gold font-extrabold">{{ $player->rank }}</span>! score <span class="text-gold fon-extrabold">{{ $player->scores->hangman_score }}</span>
+                    rank <span class="text-gold font-extrabold">{{ $player->rank }}</span>! Points: <span class="text-gold fon-extrabold">{{ $player->scores->hangman_score }}</span>
                 </p>
             @endif
         @endforeach
@@ -53,7 +53,7 @@
             <thead>
                 <tr>
                     <th>Rank</th>
-                    <th>Username</th>
+                    <th colspan="2">Player</th>
                     <th>Points</th>
                 </tr>
             </thead>
@@ -77,7 +77,16 @@
                                     <span class="medal">🥉</span>
                                 @endif
                             </td>
-                            <td>{{ $player->username }}</td>
+                            <td>
+                                @if($player->profile_picture)
+                                    <img src="{{ asset('storage/public/profile_pictures/' . $player->profile_picture) }}" alt="Profile Picture" width="10" height="10">
+                                @else
+                                    <img src="{{ asset('storage/default-avatar.png') }}" alt="Default Avatar" width="10" height="10">
+                                @endif  
+                            </td>
+                            <td>
+                                {{ $player->username }}
+                            </td>
                             <td>{{ $player->scores->hangman_score ?? 'No Score' }}</td>
                         </tr>
                     @endif

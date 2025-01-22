@@ -42,7 +42,7 @@
         @foreach ($players as $player)
             @if ($player->username == $activePlayer->username)
                 <p class="text-cream text-xl">
-                    rank <span class="text-gold font-extrabold">{{ $player->rank }}</span>! score <span class="text-gold fon-extrabold">{{ $player->scores->overall_score }}</span>
+                    rank <span class="text-gold font-extrabold">{{ $player->rank }}</span>! Points: <span class="text-gold fon-extrabold">{{ $player->scores->overall_score }}</span>
                 </p>
             @endif
         @endforeach

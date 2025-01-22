@@ -13,7 +13,7 @@
             @method('PATCH')
 
             <label for="profile_picture">Profile Picture:</label>
-            <img src="{{ $player->profile_picture }}" width="100" height="100" >
+            <img src="{{ asset('storage/public/profile_pictures/' . $player->profile_picture) }}" width="100" height="100" >
             <input type="file" name="profile_picture" id="profile_picture" accept="image/*" value="{{ $player->profile_picture }}">
 
             <label for="username">Username:</label>

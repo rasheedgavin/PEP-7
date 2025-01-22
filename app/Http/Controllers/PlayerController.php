@@ -17,7 +17,8 @@ class PlayerController extends Controller
     {
 
         $player = Player::with('users')->findOrFail($id);
-        return view('player.details', compact('player'));
+        $id = $player->id;
+        return view('player.details', compact('id'));
     }
 
     public function create()
@@ -41,7 +42,7 @@ class PlayerController extends Controller
             $filename = time() . '.' . $file->getClientOriginalExtension();
             $file->storeAs('public/profile_pictures', $filename);
     
-            $player->profile_picture = $filename; // Store the filename
+            $player->profile_picture = $filename; 
         }
     
         $player->user_id = Auth::id();
@@ -116,7 +117,7 @@ class PlayerController extends Controller
         $player->username = $request->username;
         $player->year_level = $request->year_level;
         $player->section = $request->section;
-    
+        
         $player->save();
     
         return redirect()->route('dashboard')->with('success', 'Player profile updated successfully.');
