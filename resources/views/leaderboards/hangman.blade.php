@@ -84,9 +84,11 @@
                                     <img src="{{ asset('storage/default-avatar.png') }}" alt="Default Avatar" width="10" height="10">
                                 @endif  
                             </td>
-                            <td>
-                                {{ $player->username }}
-                            </td>
+                            @if ($player->username  == $activePlayer->username)
+                                <td class="text-gold font-extrabold">{{ $player->username }}</td>
+                            @else
+                                <td>{{ $player->username }}</td>
+                            @endif
                             <td>{{ $player->scores->hangman_score ?? 'No Score' }}</td>
                         </tr>
                     @endif

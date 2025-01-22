@@ -18,7 +18,7 @@ class PlayerController extends Controller
 
         $player = Player::with('users')->findOrFail($id);
         $id = $player->id;
-        return view('player.details', compact('id'));
+        return view('player.details', compact('player', 'id'));
     }
 
     public function create()
@@ -51,7 +51,6 @@ class PlayerController extends Controller
         $player->section = $validated['section'];
         $player->save();
     
-        // Create associated score and progress records
         $score = new Score();
         $score->player_id = $player->id;
         $score->overall_score = 0;

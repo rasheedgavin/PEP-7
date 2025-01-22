@@ -53,7 +53,7 @@
             <thead>
                 <tr>
                     <th>Rank</th>
-                    <th>Username</th>
+                    <th colspan="2">Player</th>
                     <th>Points</th>
                 </tr>
             </thead>
@@ -77,7 +77,18 @@
                                     <span class="medal">🥉</span>
                                 @endif
                             </td>
-                            <td>{{ $player->username }}</td>
+                            <td>
+                                @if($player->profile_picture)
+                                    <img src="{{ asset('storage/public/profile_pictures/' . $player->profile_picture) }}" alt="Profile Picture" width="10" height="10">
+                                @else
+                                    <img src="{{ asset('storage/default-avatar.png') }}" alt="Default Avatar" width="10" height="10">
+                                @endif  
+                            </td>
+                            @if ($player->username  == $activePlayer->username)
+                                <td class="text-gold font-extrabold">{{ $player->username }}</td>
+                            @else
+                                <td>{{ $player->username }}</td>
+                            @endif
                             <td>{{ $player->scores->interactive_novel_score ?? 'No Score' }}</td>
                         </tr>
                     @endif
