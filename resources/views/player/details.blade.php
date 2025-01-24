@@ -105,7 +105,7 @@
             @if($player->profile_picture)
                 <img src="{{ asset('storage/public/profile_pictures/' . $player->profile_picture) }}" alt="Profile Picture" width="300" height="300"class="w-36 h-36 rounded-full profile-picture mb-4">
             @else
-                <img src="{{ asset('storage/default-avatar.png') }}" alt="Default Avatar" width="100" height="100" class="w-36 h-36 rounded-full profile-picture mb-4">
+                <img src="{{ asset('storage/public/photos/default-avatar.jpg') }}" alt="Default Avatar" width="100" height="100" class="w-36 h-36 rounded-full profile-picture mb-4">
             @endif  
         </div>
 

@@ -8,6 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('css/hangman.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        const imageUrl = "{{ asset('storage/public/photos/hangbird.jpg') }}";
+    </script>
 </head>
 <body>
     <div class="absolute top-4 left-4 fade-in">

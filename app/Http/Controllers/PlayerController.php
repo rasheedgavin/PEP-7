@@ -10,9 +10,7 @@ use Illuminate\Support\Facades\Storage;
 
 class PlayerController extends Controller
 {
-    /**
-     * Show a player's details.
-     */
+
     public function index($id)
     {
 
@@ -44,7 +42,8 @@ class PlayerController extends Controller
     
             $player->profile_picture = $filename; 
         }
-    
+        
+        // $validated['profile_picture'] = $request->file('profile_picture')->store('profile_picture');
         $player->user_id = Auth::id();
         $player->username = $validated['username'];
         $player->year_level = $validated['year_level'];
