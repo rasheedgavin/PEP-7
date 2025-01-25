@@ -90,38 +90,55 @@
             <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Achievements</h1>
             <p class="text-cream text-lg italic mt-2">Ipagdiwang ang iyong mga tagumpay at subaybayan ang iyong pag-unlad!</p>
         </div>
+
+        <div class="absolute top-4 left-4 fade-in">
+            <button onclick="window.location='{{ route('dashboard') }}'"
+                class="btn-gradient text-dark py-2 px-4 rounded-full shadow-lg flex items-center space-x-2 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M10 19l-7-7 7-7v14zm4-14h8v14h-8V5z"/>
+                </svg>
+                <span>Back</span>
+            </button>
+        </div>
+        
     </header>
 
-    <main class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 fade-in">
+    <main class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 fade-in">
+        <div class="achievement-card">
+            <h2 class="text-gold text-3xl font-bold achievement-header">Scores</h2>
+            <ul class="text-lg">
+                <li>Hangman Score: <span class="achievement-value">{{ $player->scores->hangman_score }}</span></li>
+                <li>Text Twister Score: <span class="achievement-value">{{ $player->scores->text_twister_score }}</span></li>
+                <li>Interactive Novel Score: <span class="achievement-value">{{ $player->scores->interactive_novel_score }}</span></li>
+                <li>Overall Score: <span class="achievement-value">{{ $player->scores->overall_score }}</span></li>
+            </ul>
+        </div>
+
         <div class="achievement-card">
             <h2 class="text-gold text-3xl font-bold achievement-header">Levels Completed</h2>
             <ul class="text-lg">
-                <li class="font-bold">Hangman Levels: 
-                    <span class="text-gold font-bold">{{ $hangmanLevel }}/30</span>
+                <li class="font-bold">Hangman
                     <div class="progress-bar">
                         <div class="progress-bar-inner" style="width: {{ round(($hangmanLevel / 30) * 100, 2) }}%;">
                             {{ round(($hangmanLevel / 30) * 100, 2) }}%
                         </div>
                     </div>
                 </li>
-                <li class="font-bold">Text Twister Levels: 
-                    <span class="text-gold font-bold">{{ $textTwisterLevel }}/30</span>
+                <li class="font-bold">Text Twister
                     <div class="progress-bar">
                         <div class="progress-bar-inner" style="width: {{ round(($textTwisterLevel / 30) * 100, 2) }}%;">
                             {{ round(($textTwisterLevel / 30) * 100, 2) }}%
                         </div>
                     </div>
                 </li>
-                <li class="font-bold">Interactive Novel Levels: 
-                    <span class="text-gold font-bold">{{ $interactiveNovelLevel }}/15</span>
+                <li class="font-bold">Interactive Novel 
                     <div class="progress-bar">
                         <div class="progress-bar-inner" style="width: {{ round(($interactiveNovelLevel / 15) * 100, 2) }}%;">
                             {{ round(($interactiveNovelLevel / 15) * 100, 2) }}%
                         </div>
                     </div>
                 </li>
-                <li class="font-bold">Overall Levels: 
-                    <span class="text-gold font-bold">{{ $overallLevel }}/75</span>
+                <li class="font-bold">Overall
                     <div class="progress-bar">
                         <div class="progress-bar-inner" style="width: {{ round(($overallLevel / 75) * 100, 2) }}%;">
                             {{ round(($overallLevel / 75) * 100, 2) }}%

@@ -77,13 +77,6 @@
                                     <span class="medal">🥉</span>
                                 @endif
                             </td>
-                            <td>
-                                @if($player->profile_picture)
-                                    <img src="{{ asset('storage/public/profile_pictures/' . $player->profile_picture) }}" alt="Profile Picture" width="10" height="10">
-                                @else
-                                    <img src="{{ asset('storage/default-avatar.png') }}" alt="Default Avatar" width="10" height="10">
-                                @endif  
-                            </td>
                             @if ($player->username  == $activePlayer->username)
                                 <td class="text-gold font-extrabold">{{ $player->username }}</td>
                             @else

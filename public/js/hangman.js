@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
         gameState.revealedLetters = new Array(levelData.word.length).fill(false);
         gameState.currentLetterIndex = 0;
 
-        gameState.player.image.src = "https://images.squarespace-cdn.com/content/v1/508da03be4b0d28844ddf21c/1534914532437-34NQK7MID0YWD35MTUOB/Rocco.jpg";
+        gameState.player.image.src = imageUrl;
         gameState.player.image.onload = drawPlayer;
 
         displayWordAndDescription();
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (gameState.lives > 0){
                 gameState.lives--;
             }
-            gameState.player.y += 15;
+            gameState.player.y -= 15;
             document.getElementById('lives').textContent = `Lives: ${gameState.lives}`;
             if (gameState.lives === 0) {
                 showPopup(`You Lose!`, false);
