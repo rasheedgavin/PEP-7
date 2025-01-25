@@ -33,9 +33,9 @@
 
     <main class="container relative px-6 py-12 mx-auto fade-in">
 
-        <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in active" id="chapter1">
+        <div class="p-8 shadow-lg chapter bg-header-gradient rounded-xl fade-in active" id="chapter1">
             <h2 class="flex text-3xl font-bold text-gold">Kabanata 1: Ang Kahariang Berbanya</h2>
-            <p class="mt-4 text-cream">Ang kaharian ng Berbanya ay tanyag bilang isang sagana at may payapang pamumuhay. Ang mga piging at pagdiriwang ay madalas na
+            <p class="mt-4 text-cream text-3xl">Ang kaharian ng Berbanya ay tanyag bilang isang sagana at may payapang pamumuhay. Ang mga piging at pagdiriwang ay madalas na
                 idinaraos sa kaharian ng Berbanya dahil masayahin ang hari’t reyna na namumuno dito na sila Don Fernando at Donya Valeriana.
                 Sila ay may tatlong lalaking mga anak na sina Don Pedro, Don Diego, at si Don Juan. Ang tatlong prisipe na ito ay likas na magagaling at
                 matatalino higit kanino pa man sa buong kaharian. Nagsanay ang tatlo sa paghawak ng mga sandata at patalim sa pakikipaglaban ngunit isa

@@ -59,7 +59,7 @@
             </thead>
             <tbody>
                 @foreach ($players as $player)
-                    {{-- @if ($player->rank <= 10) --}}
+                    @if ($player->rank <= 10)
                         <tr>
                             <td class="
                                 @if($player->rank == 1) rank-gold
@@ -77,13 +77,6 @@
                                     <span class="medal">🥉</span>
                                 @endif
                             </td>
-                            <td>
-                                @if($player->profile_picture)
-                                    <img src="{{ asset('storage/public/profile_pictures/' . $player->profile_picture) }}" alt="Profile Picture" width="10" height="10">
-                                @else
-                                    <img src="{{ asset('storage/default-avatar.png') }}" alt="Default Avatar" width="10" height="10">
-                                @endif
-                            </td>
                             @if ($player->username  == $activePlayer->username)
                                 <td class="font-extrabold text-gold">{{ $player->username }}</td>
                             @else
@@ -91,7 +84,7 @@
                             @endif
                             <td>{{ $player->score ?? 'No Score' }}</td>
                         </tr>
-                    {{-- @endif --}}
+                    @endif
                 @endforeach
             </tbody>
         </table>
