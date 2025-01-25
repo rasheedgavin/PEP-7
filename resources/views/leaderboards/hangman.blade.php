@@ -53,7 +53,7 @@
             <thead>
                 <tr>
                     <th>Rank</th>
-                    <th colspan="2">Player</th>
+                    <th>Player</th>
                     <th>Points</th>
                 </tr>
             </thead>
