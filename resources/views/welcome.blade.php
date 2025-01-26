@@ -7,14 +7,13 @@
 </head>
 <body>
 <main>
-
     <aside>
         <div>
            <h1>Welcome to PEP7</h1>
         </div>
         <p>Get ready to sharpen your mind and enjoy every word!</p>
         <p>Access your account or create a new one to get started.</p>
-       
+
     </aside>
 
     @if (Route::has('login'))
@@ -29,7 +28,7 @@
             @endauth
         </nav>
     @endif
-    
+
 </main>
 </body>
 </html>

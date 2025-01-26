@@ -35,7 +35,7 @@
 
         <div class="p-8 shadow-lg chapter bg-header-gradient rounded-xl fade-in active" id="chapter1">
             <h2 class="flex text-3xl font-bold text-gold">Kabanata 1: Ang Kahariang Berbanya</h2>
-            <p class="mt-4 text-cream text-3xl">Ang kaharian ng Berbanya ay tanyag bilang isang sagana at may payapang pamumuhay. Ang mga piging at pagdiriwang ay madalas na
+            <p class="mt-4 text-3xl text-cream">Ang kaharian ng Berbanya ay tanyag bilang isang sagana at may payapang pamumuhay. Ang mga piging at pagdiriwang ay madalas na
                 idinaraos sa kaharian ng Berbanya dahil masayahin ang hari’t reyna na namumuno dito na sila Don Fernando at Donya Valeriana.
                 Sila ay may tatlong lalaking mga anak na sina Don Pedro, Don Diego, at si Don Juan. Ang tatlong prisipe na ito ay likas na magagaling at
                 matatalino higit kanino pa man sa buong kaharian. Nagsanay ang tatlo sa paghawak ng mga sandata at patalim sa pakikipaglaban ngunit isa
@@ -47,7 +47,7 @@
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter2">
             <h2 class="text-3xl font-bold text-gold">Kabanata 2: Ang Karamdaman ni Don Fernando </h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Nagkaroon ng malubhang karamdaman si Don Fernando buhat sa isang bangungot. Sa kaniyang panaginip ay nakita niya ang bunsong
 anak na si Don Juan na pinaslang ng dalawang buhong at inihulog sa malalim na balon.
 Dahil sa pag-aalala ay hindi na nakatulog at nakakain ng maayos ang hari magmula noon hanggang sa ito’y maging buto’t-balat na. Maging
@@ -62,7 +62,7 @@ Ibong Adarna.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter3">
             <h2 class="text-3xl font-bold text-gold">Kabanata 3: Ang Paglalakbay ni Don Pedro</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Inabot ng tatlong buwan ang paglalakbay ni Don Pedro bago tuluyang matunton ang daan paakyat sa Bundok ng Tabor. Hindi naglaon
 ay natagpuan din ni Don Pedro ang Piedras Platas.
 Dumating ang laksa-laksang ibon ngunit wala sa mga ito ang dumapo sa kumikinang na puno. Nakatulog si Don Rafael habang nag-iintay sa
@@ -76,7 +76,7 @@ isang bato ang prinsipe ng Berbanya.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter4">
             <h2 class="text-3xl font-bold text-gold">Kabanata 4: Ang Kabiguan ni Don Pedro</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Dahil sa nangyari ay hindi na nakabalik ng kaharian ng Berbanya si Don Pedro.
 Inatasan ni Don Fernando ang ikalawang anak na si Don Diego na hanapin ang nawawalang kapatid at hulihin ang Ibong Adarna. Naglakbay si
 Don Diego ng mahigit limang buwan bago nito tuluyang marating ang Piedras Platas.
@@ -89,7 +89,7 @@ Parang isang libingan ang ilalaim ng puno ng Piedras Platas dahil sa dalawang pr
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter5">
             <h2 class="text-3xl font-bold text-gold">Kabanata 5: Ang Paglalakbay ni Don Juan </h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Tatlong taon na ang lumipas ay hindi pa rin nakakabalik ang magkapatid na prinsipe samantalang lalong lumubha naman ang sakit ng
 hari. Atubiling inutusan ni Don Fernando si Don Juan na hanapin ang mga kapatid nito at hulihin ang Ibong Adarna. Humingi ng bendisyon si
 Don Juan upang payagan ito na umalis para hanapin ang mga kapatid at ang natatanging lunas sa ama.
@@ -103,7 +103,7 @@ Paglao’y narating ni Don Juan ang kapatagang bahagi ng bundok Tabor. Doon ay n
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter6">
             <h2 class="text-3xl font-bold text-gold">Kabanata 6: Ang Leprosong Ermitanyo</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Humingi ng limos ang ermitanyo kay Don Juan. Ibinigay ng prinsipe ang natitirang tinapay sa matanda. Nagbilin ang ermitanyo kay Don
 Juan nang malaman nito ang pakay ng binata.
 Hinabilin ng matanda na huwag masisilaw sa kinang ng puno sa halip ay tumingin sa ibaba upang makita ang isang dampa. Doon ay
@@ -120,7 +120,7 @@ antok. Binigyan din nito ang binata ng sintas na ginto upang gamiting panghuli a
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter7">
             <h2 class="text-3xl font-bold text-gold">Kabanata 7: Ang Ibong Adarna</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Nakapuwesto si Don Juan sa ilalim ng Piedras Platas. Hindi siya napagod sa pag-iintay kung kaya’t nasaksihan niya ang taglay na gilas
 at kariktan ng Ibong Adarna. Umawit ito at nagpalit na ang kulay ng kanyang mga balahibo.
 Nang marinig ang awit ng ibon ay humikab si Don Juan. Ginawa niya ang bilin ng ermitanyo na hiwain ang palad at pigaan ng dayap ang sugat.
@@ -134,7 +134,7 @@ Dinala ni Don Juan ang ibon sa dampa habang ang ermitanyo naman ang nagkulong sa
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter8">
             <h2 class="text-3xl font-bold text-gold">Kabanata 8: Ang Pagligtas kay Don Diego at Don Pedro</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Nag-utos ang ermitanyo kay Don Juan na kumuha ng banga at punuin ito ng tubig para ibuhos sa mga kapatid niyang naging bato. Agad
 namang sumunod si Don Juan sa pinag-uutos ng ermitanyo.
 Sumalok siya ng tubig at nagtungo sa kaniyang mga kapatid. Unang binuhusan ni Don Juan ang batong si Don Pedro at agad itong nabuhay.
@@ -146,7 +146,7 @@ Adarna. Muling nagtungo ang tatlo sa dampa ng ermitanyo at doo’y nagkaroon ng 
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter9">
             <h2 class="text-3xl font-bold text-gold">Kabanata 9:  Ang Mahiwagang Katotohanan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Agad na gumaling ang mga sugat sa palad ni Don Juan matapos itong pahiran ng gamot ng ermitanyo. Muling namangha si Don Juan sa
 hiwagang ipinamalas ng nito.
 Nagbilin ang ermitanyo sa tatlong prinsipe na nawa’y makarating sila ng payapa alang-alang sa kanilang amang hari. Nagbilin din ito na huwag
@@ -163,7 +163,7 @@ nakagulapay sa gitna ng kagubatan. Tumakas sila tangay ang Ibong Adarna.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter10">
             <h2 class="text-3xl font-bold text-gold">Kabanata 10:  Ang Pagtataksil nina Don Pedro at Don Diego</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Bumalik ng palasyo ang magkapatid na sina Don Pedro at Don Diego. Bagama’t nakaratay parin ay pinilit ni Don Fernando na bumangon
 upang mayakap ang dalawang anak na matagal nang nawalay sa kanya.
 Nanlumo ito nang malaman na hindi kasama ng magkapatid ang bunsong anak na si Don Juan. Tinanong ng hari sa magkapatid kung nasan si
@@ -179,7 +179,7 @@ nilang anak.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter11">
             <h2 class="text-3xl font-bold text-gold">Kabanata 11: Ang Panalangin ni Don Juan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Wala nang ibang pinagkukunan ng pag-asa si Don Juan kundi ang panalangin. Ipinalanagin niya sa Mahal na Birhen na humaba pa ang buhay
 at gumaling ang amang may karamdaman.
 Para kay Don Juan ay kaya niyang ibigay ang Ibong Adarna sa kaniyang mga kapatid kung ito ang hangad ng mga ito at hindi na ito dapat
@@ -191,7 +191,7 @@ kahariang kinalakhan, at ang bayang kaniyang sinilangan.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter12">
             <h2 class="text-3xl font-bold text-gold">Kabanata 12: Ang Pagliligtas kay Don Juan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Biglang sumulpot ang matandang ermitanyo sa libis ng isang bundok. Doon niya natagpuang nakahandusay sa lupa si Don Juan.
 Labis na nahabag ang ermitanyo sa sinapit ng prinsipe. Sa ikalawang pagkakataon ay muling ginamot ng matanda ang sugat ni Don Juan. Sa
 isang iglap ay biglang naglaho ang mga sugat sa katawan ng prinsipe.
@@ -204,7 +204,7 @@ pabalik sa kaharian ng Berbanya.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter13">
             <h2 class="text-3xl font-bold text-gold">Kabanata 13: Ang Pagbabalik ni Don Juan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Sa wakas ay nakabalik na muli si Don Juan sa kaharian ng Berbanya. Namutla ang mukha nina Don Pedro at Don Diego nang nakita nila ang
 bunsong kapatid.
 Unang pinuntahan ng prinsipe ang nakaratay na ama at lumuhod ito sa harap ng hari. Umawit na rin ang Ibong Adarna at inilahad nito ang
@@ -222,7 +222,7 @@ Masayang niyakap ni Don Juan ang dalawa niyang kapatid. Bumalik ang kasiyahan ng
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter14">
             <h2 class="text-3xl font-bold text-gold">Kabanata 14: Ang Muling Pagtataksil</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Giliw na giliw ang hari sa Ibong Adarna. Gabi-gabi kung ito’y dalawin ng hari.
 Napagpasyahan ng hari na ipabantay ang Ibong Adarna sa mga anak upang hindi ito mawala o makatakas man. Nagbabala ang hari na
 mananagot ang sinumang magpabaya sa ibon. Halinhinang nagbabantay ang magkakapatid.
@@ -237,7 +237,7 @@ dalawa niyang kapatid na pakawalan ang Ibong Adarna.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter15">
             <h2 class="text-3xl font-bold text-gold">Kabanata 15: Ang Muling Paglisan ni Don Juan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Madaling araw pa lang ay umalis na si Don Juan upang tumakas sa kaniyang ama. Batid niyang kailangan niyang magtago dahil sa
 pagpapabaya sa Ibong Adarna.
 Paggising ng hari ay agad itong nagtungo sa silid na kinaroroonan ng ibon. Nagulat ito nang matagpuang wala na ang ibon sa hawla. Nang
@@ -252,7 +252,7 @@ naroon si Don Juan.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter16">
             <h2 class="text-3xl font-bold text-gold">Kabanata 16: Ang Bagong Paraiso</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Ang kabundukan ng Armenya ay paraiso sa kagandahan. Maraming hayop at pananim sa paligid. Maraming uri ng ibon ang nasa
 himpapawid. Malinis at malinaw ang tubig sa batis. Walang magugutom sa lugar na iyon dahil sa mayamang kalikasan.
 Sa lugar na ito naninirahan si Don Juan upang magtago at huwag maparusahan sa pagkawala ng Ibong Adarna. Nahihiya si Don Diego na
@@ -267,7 +267,7 @@ ng Armenya na hindi pa nila nararating.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter17">
             <h2 class="text-3xl font-bold text-gold">Kabanata 17: Ang Mahiwagang Balon sa Armenya</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Sa kanilang paglalakbay ay isang balon ang natuklasan ng magkakapatid. Ito ay may makikinis na marmol at ang lumot sa paligid nito ay may
 gintong nakaukit.
 Manghang-mangha ang magkakapatid sa nakita dahil sa lalim ng balon ay wala naman itong lamang tubig. May makikita din doon na lubid
@@ -282,7 +282,7 @@ Si Don Pedro at Don Diego ay nababahala at naiinip na sa kakaintay sa muling pag
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter18">
             <h2 class="text-3xl font-bold text-gold">Kabanata 18: Ang Nakakaakit na si Donya Juana</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Patuloy pa rin sa pagbaba si Don Juan hanggang sa marating niya ang pinakamalalim na bahagi ng balon. Namangha siya dahil isang
 magandang hardin ang kaniyang nasaksihan.
 Ito ang natatagong paraiso sa Armenya. Puno ng halaman at bulaklak sa paligid. Nagiging makulay at masamyo ang amoy ng kapaligiran dahil
@@ -297,7 +297,7 @@ Sumamo si Don Juan na tanggapin ng dalaga ang kaniyang pag-ibig. Hindi naman ito
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter19">
             <h2 class="text-3xl font-bold text-gold">Kabanata 19: Ang Higanteng Bantay</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Nagbabala si Donya Juana kay Don Juan na ang nagbabantay sa hardin ay isang malupit na higante. Maya-maya pa’y lumabas ang higante
 dahil may naamoy daw ito na tao.
 Laking tuwa ng higante dahil hindi na niya kinakailangang mamundok upang humanap ng makakain. Nagalit si Don Juan sa higante at hinarap
@@ -313,7 +313,7 @@ Matatagpuan si Prinsesa Leonora sa di kalayuang palasyo na may malaking hagdanan
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter20">
             <h2 class="text-3xl font-bold text-gold">Kabanata 20:  Ang Prinsesang mas Kaibig-ibig</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Nabigla si Prinsesa Leonora nang makita si Don Juan. Nabighani naman ang prinsipe sa prinsesa dahil sa labis nitong kagandahan.
 Minamadaling paalisin ng prinsesa si Don Juan dahil hindi magtatagal ay maaari nang dumating ang serpyente. Nagmakaawa si Don Juan kay
 Prinsesa Leonora na siya ay kupkupin sapagkat tunay na nabihag niya ang puso ng prinsipe.
@@ -327,7 +327,7 @@ Ilang sandali pa ay nakaramdam sila ng pagyanig sa buong paligid.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter21">
             <h2 class="text-3xl font-bold text-gold">Kabanata 21: Ang Serpyenteng may Pitong Ulo</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Kasabay ng malakas na pagyanig ay ang gumagapang na ahas paakyat sa hagdanan. Katulad ng pagharap sa higante ay matapang niya ring
 hinarap ang serpyente na may pitong ulo.
 Tinagpas niya ang ulo nito ngunit muli itong tumubo at nabuhay. Nakaramdam man ng pagod ay hindi nakalimutan ng prinsipe ang
@@ -342,7 +342,7 @@ bakit ito mas lalong nainggit sa kapatid lalo pa’t nabighani ito sa kagandahan
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter22">
             <h2 class="text-3xl font-bold text-gold">Kabanata 22: Ang Panibagong Panlilinlang</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Nang umalis ay naiwan ni Prinsesa Leonora ang singsing na diyamante na pinamana pa ng kaniyang ina. Tanging ang kanyang lobo lamang ang
 naisama.Dahil sa ginawang pagtataksil ng kapatid ay nahimatay si Prinsesa Leonora. Nagkaroon muli ng malay ang prinsesa habang nasa bisig
 ni Don Pedro. Ipinangako ni Don Pedro na gagawin niyang reyna ng Berbanya si Prinsesa Leonora.
@@ -356,7 +356,7 @@ Pumayag ang hari na sina Don Diego at Donya Juana muna ang ipakasal. Nagkaroon n
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter23">
             <h2 class="text-3xl font-bold text-gold">Kabanata 23: Ang Lobong Engkantada</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Naabutan ng lobo si Don Juan na duguan at lamog ang katawan. Dali-dali itong kumuha ng tatlong bote at nagtungo sa Ilog ng Jordan.
 Nalinlang ng lobo ang mahigpit na tagapagbantay sa ilog at nilagyan ng tubig ang tatlong bote. Nang matuklasan ng tagapagbantay ang
 ginawa ng lobo ay hinabol ito ngunit agad itong tumalon sa bangin ng isang burol.
@@ -371,7 +371,7 @@ ay nakaramdam na ng pagod. Natagpuan niya ang isang punongkahoy na mayabong at d
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter24">
             <h2 class="text-3xl font-bold text-gold">Kabanata 24: Ang Muling Pagkikita ng Ibong Adarna at ni Don Juan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Nagising si Don Juan dahil sa awit ng Ibong Adarna. Nang magising ay laking tuwa ng prinsipe nang makita niya ang ibon na nakadapo sa
 sanga.
 Muling nagsalaysay ang ibon kay Don Juan sa pamamagitan ng awit nito. Natuklasan ng prinsipe na kaya umalis ang ibon ay dahil gusto nitong
@@ -388,7 +388,7 @@ Prinsesa Leonora dahil sa pagkabahala na baka hindi nailigtas ng lobo ang kaniya
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter26">
             <h2 class="text-3xl font-bold text-gold">Kabanata 25: Ang Bagong Mundo</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Sa loob ng tatlong taon na paglalakbay ni Don Juan sa parang at mga gubat ay imbes na mapalapit ito sa Reyno delos Cristales ay mas lalo
 lang napalayo at naligaw.
 May natagpuan siyang isang matanda at dahil sa gutom ay humingi ito dito ng limos. Binigyan ng matanda si Don Juan ng durog at bukbukin
@@ -406,7 +406,7 @@ baro ay galing sa isang matandang sugatan.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter26">
             <h2 class="text-3xl font-bold text-gold">Kabanata 26: Ang Panangis ni Prinsesa Leonora</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Habang si Don Juan ay patuloy sa paglalakbay, si Prinsesa Leonora naman ay patuloy din sa pagtangis.
 Sa tuwing nalalaman niyang hindi si Don Juan ang dumadalaw sa kanya kundi si Don Pedro ay hindi nito pinagbubuksan ng pinto. Ang
 pangalan pa rin ni Don Juan ang laging sambit ng prinsesa.
@@ -421,7 +421,7 @@ binagtas bago tuluyang makarating sa dampa ng ermitanyo.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter27">
             <h2 class="text-3xl font-bold text-gold">Kabanata 27: Ang Ikapitong Bundok </h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Sa ikapitong bundok ay nasilayan ni Don Juan ang ermitanyo na hanggang baywang ang balbas. Ibinigay ng Don sa ermitanyo ang kapiraso ng
 baro na noo’y binigay ng matanda na nagpalimos ng pagkain at inumin sa kaniya.
 Nalaman ng ermitanyo ang pakay ni Don Juan ngunit sa loob ng limang daang taon na paninirahan ay hindi nito nababatid ang Reyno delos
@@ -439,7 +439,7 @@ kinaroroonan ng kaharian.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter28">
             <h2 class="text-3xl font-bold text-gold">Kabanata 28: Ang Higanteng Agila</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Huling dumating ang higanteng agila na tila pagod na pagod. Nagalit ang ermitanyo dahil mahigpit na bilin nito na sa oras na marinig ang
 tunog ng kampana ay kailangan makauwi agad ang mga ibon.
 Humingi ito ng paumanhin at nagpaliwanag na siya ay galing pa sa napakalayong lugar. Bagama’t napakabilis nang kaniyang paglipad ay
@@ -454,7 +454,7 @@ paglalakbay. Sumakay si Don Juan sa likod ng higanteng agila at nagsimulang lumi
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter29">
             <h2 class="text-3xl font-bold text-gold">Kabanata 29: Ang Reyno Delos Cristales</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Gaya ng inasahan, nakarating ang agila at si Don Juan sa banyo ni Maria Blanca pagkatapos ng isang buwang paglipad. Hindi tumigil sa
 paglipad ang agila at naubos na din ang kanilang baon na pagkain.
 Nang makarating sa banyong paliguan ni Maria Blanca ay bumaba si Don Juan mula sa likod ng higanteng agila. Ito ay nagkubli sa likod ng
@@ -472,7 +472,7 @@ Nabigla ang prinsesa nang makitang wala na doon ang kaniyang mga damit at nagban
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter30">
             <h2 class="text-3xl font-bold text-gold">Kabanata 30: Ang Prinsesang si Maria Blanca</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Natapos nang maligo ang magkakapatid at naiwang mag-isa si Maria Blanca sa paliguan. Nagalit ito nang mapansin niyang wala na ang
 kaniyang damit.
 Lumapit si Don Juan sa prinsesa at humingi ng tawad. Inihanda niya ang sarili para sa kaparusahan na ibibigay sa kaniya ni Maria Blanca.
@@ -487,7 +487,7 @@ Habang sa gabi naman ay magkikita sila ni Maria Blanca upang ipaalam dito ang un
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter31">
             <h2 class="text-3xl font-bold text-gold">Kabanata 31: Ang Ika-Unang Pagsubok ng Hari</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Kinabukasan ay nagkita si Don Juan at Haring Salermo sa hardin. Pinapatuloy ng hari sa loob ng palasyo si Don Juan ngunit ito ay tumanggi sa
 halip ay naghintay nang ipag-uutos ng hari.
 Nag-utos ang hari sa kaniyang tauhan na kumuha ng isang salop ng trigong kakaani palang at ibinigay iyon kay Don Juan upang itanim.
@@ -503,7 +503,7 @@ Namangha ang hari dahil siya ay hinainan ng tinapay na may iba’t-ibang kulay a
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter32">
             <h2 class="text-3xl font-bold text-gold">Kabanata 32:  Ang Ikalawang Utos ng Hari </h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Nagkita si Don Juan at Haring Salermo para sa ikalawang pagsubok.Habang nasa hardin ay may inilabas ang hari na isang prasko na may
 lamang labindalawang negrito at pinakawalan ito sa karagatan. Utos ng hari na hulihin ang lahat ng iyon at muling isilid sa prasko. Nais ng hari
 na makita iyon kinaumagahan upang makaligtas sa kaparusahang kamatayan.
@@ -518,7 +518,7 @@ Don Juan katulad ng ginawa niya sa ibang mga nagtangkang manligaw sa kaniyang an
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter33">
             <h2 class="text-3xl font-bold text-gold">Kabanata 33: Ang Paglipat sa Bundok</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Muling nagkita si Don Juan at Haring Salermo sa hardin para sa susunod na pagsubok. Nais ng hari na itapat ang bundok sa harap ng kanyang
 durungawan upang pumasok sa palasyo ang sariwang hangin. Bilin ng hari na mailipat ito bago pa man sumikat ang araw.
 Nakipagkita muli si Don Juan kay Maria Blanca at kita sa mukha nito ang pangamba. Muling pinayapa ng prinsesa ang prinsipe at sinabing siya
@@ -531,7 +531,7 @@ Hindi makapaniwala ang hari na muling malalagpasan ni Don Juan ang kaniyang pags
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter34">
             <h2 class="text-3xl font-bold text-gold">Kabanata 34: Ang Paggawa ng Kastilyo</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Sa susunod na pagkikita ay iniutos ng hari kay Don Juan na itakip ang bundok sa gitna ng karagatan at tayuan ito ng kastilyo.
 Kinakailangan na lagyan ng gulod at kanyon ang gagawing kaharian. Ibinigay din sa kaniya ang mga gagamiting materyales katulad ng palataw
 at bareta, piko, kalaykay, maso at kutsara. Sa pagsubok na ito masusukat ng hari ang katalinuhang taglay ni Don Juan.
@@ -545,7 +545,7 @@ Blanca ay nawala ang kastilyo at muling bumalik ang lahat sa dati nitong anyo.Na
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter35">
             <h2 class="text-3xl font-bold text-gold">Kabanata 35: Ang Nawawalang Singsing</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Ipinatawag ni Haring Salermo si Don Juan at sinabi dito na nahulog ang diyamante niyang singsing. Nais ng hari na hanapin ni Don Juan ang
 singsing sa gitna ng dagat at matagpuan ito sa ilalim ng unan ng hari. Ikasiyam ng gabi nang magkita sina Don Juan at Maria Blanca sa
 banyong paliguan. Nagtungo ang dalawa sa dagat.
@@ -564,7 +564,7 @@ kinabukasan.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter36">
             <h2 class="text-3xl font-bold text-gold">Kabanata 36: Ang Pag-Amo sa Kabayo</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Sa muling pagkakataon ay ipinatawag ni Haring Salermo si Don Juan. Inutusan niya itong paamuhin ang isang kabayong mailap at malupit.
 Tinuruan ni Maria Blanca si Don Juan sa mga pamamaraan kung paano mapaamo dahil batid niyang ang kabayo na iyon ay ang kaniyang ama.
 Bilin ng dalaga na dagukan at paluin ito kung umalma. Nagawa ni Don Juan ang mga bilin ni Maria Blanca kung kaya’t napagtagumpayan
@@ -575,7 +575,7 @@ Nakaratay na ang hari at nagwakas na din ang panganib kaya maaari nang makapasok
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter37">
             <h2 class="text-3xl font-bold text-gold">Kabanata 37: Ang Pagpili sa mga Prinsesa</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Kinabukasan ay ipinatawag ng hari si Don Juan. Nang makapasok sa palasyo ay napansin ng binata na ang lahat ay nakangiti maging ang
 tusong hari.Labis na nagtataka ang prinsipe dahil kahit nakaratay na si Haring Salermo ay bakas sa mukha niya ang saya.
 Masayang ibinalita ng hari na iyon na ang panahon upang ipagkaloob sa kaniya ang gantimpalang nararapat sa kaniya. Dinala siya sa tatlong
@@ -590,7 +590,7 @@ Nalaman ni Maria Blanca ang plano ng ama kaya nagpasya ang dalawa na tumakas.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter38">
             <h2 class="text-3xl font-bold text-gold">Kabanata 38: Ang Pagtakas sa Reyno Delos Cristales</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Sa pagtakas ay inutusan ni Maria Blanca si Don Juan na kuhanin ang kabayo na nasa ikapitong pinto ngunit nagkamali ang prinsipe sa pagkuha
 at nakuha ang kabayo sa ikawalong pinto.
 Wala na silang oras magsisihan dahil kailangan na agad nilang makatakas. Tila isang ipu-ipo sa tulin ang nangyaring habulan sa pagitan ni
@@ -608,7 +608,7 @@ ng mahabang paglalakbay.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter39">
             <h2 class="text-3xl font-bold text-gold">Kabanata 39: Ang Sumpaan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Nang makarating sa palasyo ay nagpaalam si Don Juan kay Maria Blanca na iiwan muna ito sa isang nayon habang siya ay mauuna nang
 pumasok sa palasyo upang makapaghanda ng isang magarbong pagsalubong para sa prinsesa.
 Sa una ay tutol ang dalaga ngunit wala din itong nagawa. Mahigpit na nagbilin si Maria Blanca kay Don Juan na huwag titingin o lalapit man
@@ -624,7 +624,7 @@ Dahil dito ay hinayaan ng hari na pumili si Prinsesa Leonora ng kaniyang papakas
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter40">
             <h2 class="text-3xl font-bold text-gold">Kabanata 40: Ang Paglimot sa Sumpaan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Nagtakda ang hari na maikasal sina Don Juan at Prinsesa Leonora sa linggo ding iyon. Si Don Pedro ay dapat sana’y itatakwil ng hari ngunit
 nakiusap si Prinsesa Leonora na gawin nalang ito pagkatapos ng gaganaping kasal.
 Nagdiwang ang buong kaharian sa nalalapit na pag-iisang dibdib ng dalawa habang tatlong araw na ang nakakalipas ay hindi parin bumabalik
@@ -639,7 +639,7 @@ maghahatid dito sa kaharian ng Berbanya.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter41">
             <h2 class="text-3xl font-bold text-gold">Kabanata 41: Ang Pagbawi kay Don Juan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Sinalubong ng tugtugan ang pagdating ni Maria Blanca na nagpapanggap bilang emperatris. Panandaliang hininto ang kasal upang parangalan
 ang pagdating ng mahalagang bisita.
 Labis na pighati ang nararamdaman ni Maria Blanca dahil nasisilayan niya si Don Juan na nakatuon ang pansin kay Prinsesa Leonora.
@@ -652,7 +652,7 @@ Biglang may sumulpot na prasko na may nakalagay na dalawang maliliit na ita.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter42">
             <h2 class="text-3xl font-bold text-gold">Kabanata 42: Ang Dula-Dulaan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Ang dalawang ita sa prasko ay mag-asawa. HInahampas ng negrita ang negrito gamit ang pamalo sa tuwing hindi nito naaalala ang mga
 pangyayari.
 Sa pamamagitan ng dula ay isinasalaysay nito ang mga pagsubok na ibinigay ni Haring Salermo.
@@ -664,7 +664,7 @@ Pinapalo ng negrita ang negrito ngunit si Don Juan ang nasasaktan.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter43">
             <h2 class="text-3xl font-bold text-gold">Kabanata 43: Ang Pagpaparusa kay Don Juan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Sa kabila ng pagpapalabas ng dula ay hindi pa rin makaalala si Don Juan sa halip ay mas lalo pa itong nawili kay Prinsesa Leonora.
 Ipinagpatuloy ng dalawang ita ang dula at isinalaysay nito ang pagtakas noon ng dalawa kay Haring Salermo. Upang di maabutan ng hari ay
 ginamit ni Maria Blanca ang kapangyarihan ng diyamanteng singsing.
@@ -678,7 +678,7 @@ gunawin ang buong reyno.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter44">
             <h2 class="text-3xl font-bold text-gold">Kabanata 44: Ang Pagbabalik ng Alaala ni Don Juan</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Sa isang iglap ay biglang nagbalik ang lahat ng alaala ng prinsipe. Agad itong humingi ng tawad kay Maria Blanca at nangakong hindi na muli
 ito magtataksil.
 Noon din ay nalaman ni Don Fernando ang lahat ng totoong pangyayari. Naguguluhan ang hari kung ano ang nararapat na gawin lalo na kung
@@ -694,7 +694,7 @@ Nang mga oras na iyon ay ninais ni Don Juan na makasal sila ni Maria Blanca.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter45">
             <h2 class="text-3xl font-bold text-gold">Kabanata 45: Ang Masayang Yugto</h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Naging makatuwiran si Haring Fernando at pinili kung ano ang nararapat. Ipinakasal ng hari si Don Juan kay Maria Blanca. Wala namang
 nagawa si Prinsesa Leonora kundi tanggapin ang kapasyahan ng hari.
 Nais ni Don Fernando na ipamana ang kaharian ng Berbanya kay Don Juan ngunit sinabi ni Maria Blanca na ipagkaloob nalang ito kay Don
@@ -706,7 +706,7 @@ Cristales.
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in" id="chapter46">
             <h2 class="text-3xl font-bold text-gold">Kabanata 46: Ang Hari at Reyna ng Reyno Delos Cristales </h2>
-            <p class="mt-4 text-cream">
+            <p class="mt-4 text-3xl text-cream">
                 Ipinagtaka ni Don Juan ang mabilis na pagdating nila sa Reyno delos Cristales. Kung ang una niyang paglalakbay ay inabot ng isang buwan
 ngayon naman ay nakarating sila sa kaharian sa loob ng isang oras. Matagal-tagal na din mula ng yumao ang amang hari at ang kaniyang mga
 kapatid na prinsesa. Nasa pamumuno man ng iba ang kaharian ay nanatili itong mapayapa.
