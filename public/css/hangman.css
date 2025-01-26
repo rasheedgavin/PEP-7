@@ -69,30 +69,23 @@ body {
     display: flex;
     justify-content: center;
     gap: 3px; 
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 #word-container span {
-    display: inline-block;
-    width: 35px; 
-    height: 45px;
-    margin: 5px;
-    padding: 7px 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
     justify-content: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
+    align-items: center;
     background: linear-gradient(to bottom, #F4D03F, #8B5E3C);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    color: #1e1e1e;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-#word-container span:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(244, 208, 63, 0.9); 
-}
 
 #game-container {
     max-width: 800px;

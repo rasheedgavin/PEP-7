@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Text Twister Game</title>
+    <title>Text Twister</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/hangman.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* Custom Tailwind Extensions */
+        /* Custom Colors and Styles */
         .bg-header-gradient {
             background: linear-gradient(to right, #1e1e1e, #3b2f2f);
         }
@@ -34,102 +35,117 @@
             transform: scale(1.1);
             box-shadow: 0 0 20px rgba(244, 208, 63, 0.9);
         }
+        
+        #game-container{
+            height: 60%;
+            .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        }
+
         #word-boxes-container {
             display: flex;
-            justify-content: center;
-            gap: 3px; 
-            margin-top: 20px;
-            margin-bottom: 20px;
+            flex-direction: column; /* Arrange rows vertically */
+            align-items: center; /* Center-align all rows */
+            gap: 15px; /* Space between rows */
+            margin: 20px 0;
         }
 
         .word-box {
+            width: 50px;
+            height: 50px;
             display: flex;
-            width: 35px; 
-            height: 45px;
-            margin: 5px;
-            padding: 7px 10px;
             justify-content: center;
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
+            align-items: center;
             background: linear-gradient(to bottom, #F4D03F, #8B5E3C);
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            color: #1e1e1e;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+        .popup #next-btn {
+            margin-top: 1rem;
+        }
+
+        footer{
+            position: sticky;
+        }
     </style>
 </head>
-<body class="bg-body-gradient text-cream min-h-screen flex flex-col justify-between">
-
-    <!-- Header -->
-    <header class="bg-header-gradient py-6 shadow-lg">
-        <div class="container mx-auto text-center">
-            <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Text Twister</h1>
-            <h2 id="category-level" class="text-gold text-3xl font-bold mb-4">
-                {{ ucfirst($category) }} - Level {{ $level }}
-            </h2>
-            <div id="lives" class="text-gold">Lives: 10</div>
-            <div id="score" class="text-gold">Score: {{$player->scores->text_twister_score}}</div>
-        </div>
-        <div class="absolute top-4 left-4 fade-in">
-            <button onclick="window.location='{{ route('dashboard') }}'"
-                class="btn-gradient text-dark py-2 px-4 rounded-full shadow-lg flex items-center space-x-2 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M10 19l-7-7 7-7v14zm4-14h8v14h-8V5z"/>
-                </svg>
-                <span>Back</span>
-            </button>
-        </div>
-    </header>
-
+<body>
     <!-- Back Button -->
     <div class="absolute top-4 left-4">
-        <button onclick="window.location.href='{{ route('text-twister.levels', compact('category', 'level')) }}'" 
-            class="btn-gradient text-dark py-2 px-6 rounded-full shadow-md">
-            Back
+        <button onclick="window.location='{{ route('dashboard') }}'" 
+            class="btn-gradient text-dark py-2 px-4 rounded-full flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 19l-7-7 7-7v14zm4-14h8v14h-8V5z"/>
+            </svg>
+            <span>Back</span>
         </button>
     </div>
 
-    <!-- Game Container -->
-    <main class="flex-1 container mx-auto px-6 py-12 flex justify-center">
-        <div id="game-container" class="bg-header-gradient p-8 rounded-lg shadow-lg text-center w-full max-w-2xl">
+    <!-- Header -->
+    <header class="bg-header-gradient py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Text Twister</h1>
+            <h2 id="category-level" class="text-3xl font-bold mb-4">
+                {{ ucfirst($category) }} - Level {{ $level }}
+            </h2>
+            <div id="lives" class="hidden">Lives: 10</div>
+            <div id="score" class="text-lg">Score: {{$player->scores->text_twister_score}}</div>
+        </div>
+    </header>
 
+    <!-- Game Container -->
+    <main class="flex-1 flex items-center justify-center">
+        <div id="game-container" class="bg-header-gradient w-full max-w-3xl p-8 rounded-lg shadow-lg">
             <!-- Jumbled Letters -->
-            <div id="jumbled-letters-container" class="text-gold text-4xl font-bold mb-8"></div>
+            <div id="jumbled-letters-container" class="text-gold text-4xl font-bold mb-6"></div>
 
             <!-- Input and Submit Button -->
-            <div class="flex justify-center gap-4 mb-6">
+            <div class="flex justify-center items-center gap-4 mb-6">
                 <input type="text" id="word-input" placeholder="Type your word here"
                     class="text-lg p-4 rounded-lg border-2 border-gold bg-transparent text-cream w-full max-w-xs">
-                <button id="submit-word-btn" class="btn-gradient text-dark px-6 py-3 rounded-full shadow-md">
+                <button id="submit-word-btn" class="btn-gradient text-dark px-6 py-3 rounded-full">
                     Submit
                 </button>
             </div>
 
             <!-- Word Boxes -->
             <div id="word-boxes-container"></div>
-
-
         </div>
     </main>
 
     <!-- Popup -->
-    <div id="popup" class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 hidden">
-        <div class="bg-header-gradient text-center p-8 rounded-lg shadow-lg w-full max-w-md">
-            <div id="popup-content" class="text-cream text-xl mb-6"></div>
-            <button id="next-btn" class="btn-gradient text-dark px-8 py-3 rounded-full shadow-md">
-                Next Level
-            </button>
-        </div>
+    <div id="popup" class="popup">
+        <div id="popup-content"></div>
+        <button id="next-btn" class="btn-gradient">Next Level</button>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-footer-gradient py-6">
+    
+    <footer class="bg-footer-gradient py-4 fade-in">
         <div class="container mx-auto text-center">
-            <p class="text-gold">&copy; 2025 PEP SEVEN. Designed with passion and creativity.</p>
+            <p class="text-gold">&copy; 2025 PEP SEVEN.</p>
         </div>
     </footer>
+
+</body>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -203,19 +219,27 @@
         }
 
         function displayWordBoxes() {
-            wordBoxesContainer.innerHTML = '';
+            wordBoxesContainer.innerHTML = ''; // Clear the container
             const levelData = getLevelData();
+
             levelData.words.forEach(word => {
-                const wordContainer = document.createElement('div');
-                wordContainer.style.marginBottom = '10px';
+                // Create a container for each word
+                const wordRow = document.createElement('div');
+                wordRow.style.display = 'flex'; // Align letters in a row
+                wordRow.style.justifyContent = 'center'; // Center-align the word
+                wordRow.style.marginBottom = '10px'; // Add spacing between rows
+
                 word.split('').forEach(() => {
                     const wordBox = document.createElement('div');
                     wordBox.classList.add('word-box');
-                    wordContainer.appendChild(wordBox);
+                    wordRow.appendChild(wordBox);
                 });
-                wordBoxesContainer.appendChild(wordContainer);
+
+                wordBoxesContainer.appendChild(wordRow); // Add the row to the container
             });
         }
+
+
 
         function displayFoundWords() {
             foundWordsElement.textContent = `Found Words: ${Array.from(foundWords).join(', ')}`;
@@ -223,37 +247,37 @@
 
         function checkWord(word) {
             const levelData = getLevelData();
+            
             if (levelData.words.includes(word) && !foundWords.has(word)) {
-                foundWords.add(word); // Add the word to the found set
-                textTwisterScore += score; // Increment the score
-                scoreElement.textContent = `Score: ${textTwisterScore}`; // Update UI
-                updateWordBoxes(word); // Fill the correct boxes
-                displayFoundWords(); // Update found words on UI
-                updateScores(playerId, score, category, level); // Send score update to backend
+                foundWords.add(word); // Add word to the set
+                textTwisterScore += score; // Update the score
+                scoreElement.textContent = `Score: ${textTwisterScore}`; 
+                updateWordBoxes(word); 
 
-                // Check if all words are found to trigger level completion popup
+                // Check if all words are found
                 if (foundWords.size === levelData.words.length) {
-                    showPopup(`Correct! You earned ${score} points! Click "Next" to proceed.`, true);
+                    showPopup(`Great job! You've found all words! You earned ${textTwisterScore} points.`, true);
+                    updateScores(playerId, score, category, level);
                 }
             } else {
-                lives--; // Decrement lives if the word is invalid
-                livesElement.textContent = `Lives: ${lives}`; // Update UI
+                // Handle incorrect word
+                lives--;
+                livesElement.textContent = `Lives: ${lives}`;
                 if (lives === 0) {
-                    // Game over popup
-                    showPopup(`You Lose! Words were: ${levelData.words.join(', ')}`, false);
+                    showPopup(`Game over! Words were: ${levelData.words.join(', ')}`, false);
                 }
             }
         }
 
-
         function updateWordBoxes(word) {
             const levelData = getLevelData();
             const wordContainers = Array.from(wordBoxesContainer.childNodes);
+
             wordContainers.forEach((container, index) => {
                 if (levelData.words[index] === word) {
                     const boxes = container.childNodes;
                     for (let j = 0; j < boxes.length; j++) {
-                        boxes[j].textContent = word[j];
+                        boxes[j].textContent = word[j]; // Fill each box with the correct letter
                     }
                 }
             });
@@ -261,10 +285,10 @@
 
         function showPopup(message, showNextBtn = false) {
             popupContent.textContent = message;
-            popup.style.display = 'block'; // Show the popup
-            nextBtn.style.display = showNextBtn ? 'block' : 'none'; // Show Next button if applicable
-
+            popup.style.display = 'block'; // Ensure the popup is visible (not `block` if using Flexbox)
+            nextBtn.style.display = showNextBtn ? 'inline-block' : 'none'; // Show Next button only when needed
         }
+
 
         function updateScores(playerId, score, category, level) {
             const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
@@ -310,21 +334,26 @@
         });
 
         nextBtn.addEventListener('click', function () {
-            popup.style.display = 'none';
-            level++;
+            popup.style.display = 'none'; // Hide the popup
+            level++; // Increment level
+
+            // Check if we need to transition to the next category
             if (level > 10) {
                 if (category === 'easy') {
-                    category = 'medium';
+                    category = 'medium'; // Move to medium category
                 } else if (category === 'medium') {
-                    category = 'hard';
+                    category = 'hard'; // Move to hard category
                 } else {
-                    showPopup('Congratulations! You completed all levels!');
-                    return;
+                    // All levels completed in hard category
+                    showPopup('Congratulations! You completed all levels!', false);
+                    return; // Stop here
                 }
-                level = 1;
+                level = 1; // Reset level to 1 for the new category
             }
+
+            // Generate the new URL for the next level
             const newUrl = `/text-twister/${category}/${level}`;
-            window.location.href = newUrl;
+            window.location.href = newUrl; // Redirect to the next level
         });
 
         resetGame();
