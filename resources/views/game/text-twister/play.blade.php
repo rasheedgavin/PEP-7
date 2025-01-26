@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Custom Colors and Styles */
         .bg-header-gradient {
             background: linear-gradient(to right, #1e1e1e, #3b2f2f);
         }
@@ -37,19 +36,22 @@
         }
         
         #game-container{
-            height: 60%;
-            .card:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
+            width: 800px; 
+            height: 600px; 
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
         }
 
         #word-boxes-container {
             display: flex;
-            flex-direction: column; /* Arrange rows vertically */
-            align-items: center; /* Center-align all rows */
-            gap: 15px; /* Space between rows */
+            flex-direction: column; 
+            align-items: center;
+            gap: 15px; 
             margin: 20px 0;
         }
 
@@ -84,13 +86,9 @@
             margin-top: 1rem;
         }
 
-        footer{
-            position: sticky;
-        }
     </style>
 </head>
 <body>
-    <!-- Back Button -->
     <div class="absolute top-4 left-4">
         <button onclick="window.location='{{ route('dashboard') }}'" 
             class="btn-gradient text-dark py-2 px-4 rounded-full flex items-center space-x-2">
@@ -101,25 +99,20 @@
         </button>
     </div>
 
-    <!-- Header -->
     <header class="bg-header-gradient py-6">
         <div class="container mx-auto text-center">
             <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Text Twister</h1>
             <h2 id="category-level" class="text-3xl font-bold mb-4">
                 {{ ucfirst($category) }} - Level {{ $level }}
             </h2>
-            <div id="lives" class="hidden">Lives: 10</div>
-            <div id="score" class="text-lg">Score: {{$player->scores->text_twister_score}}</div>
+            <div id="score" class="text-crem text-lg italic mt -2">Score: <span class="text-gold font-extrabold">{{ $player->scores->text_twister_score }}</span></div>
         </div>
     </header>
 
-    <!-- Game Container -->
     <main class="flex-1 flex items-center justify-center">
         <div id="game-container" class="bg-header-gradient w-full max-w-3xl p-8 rounded-lg shadow-lg">
-            <!-- Jumbled Letters -->
             <div id="jumbled-letters-container" class="text-gold text-4xl font-bold mb-6"></div>
 
-            <!-- Input and Submit Button -->
             <div class="flex justify-center items-center gap-4 mb-6">
                 <input type="text" id="word-input" placeholder="Type your word here"
                     class="text-lg p-4 rounded-lg border-2 border-gold bg-transparent text-cream w-full max-w-xs">
@@ -128,21 +121,17 @@
                 </button>
             </div>
 
-            <!-- Word Boxes -->
             <div id="word-boxes-container"></div>
         </div>
     </main>
 
-    <!-- Popup -->
     <div id="popup" class="popup">
         <div id="popup-content"></div>
         <button id="next-btn" class="btn-gradient">Next Level</button>
     </div>
     
-    <footer class="bg-footer-gradient py-4 fade-in">
-        <div class="container mx-auto text-center">
-            <p class="text-gold">&copy; 2025 PEP SEVEN.</p>
-        </div>
+    <footer class="bg-footer-gradient py-4 mt-8">
+        <p class="text-gold fade-in">&copy; 2025 Hangman Game.</p>
     </footer>
 
 </body>
@@ -160,7 +149,7 @@
                 7: { letters: 'pig', words: ['pig', 'pi'] },
                 8: { letters: 'hen', words: ['hen', 'he'] },
                 9: { letters: 'owl', words: ['owl', 'wo', 'low'] },
-                10: { letters: 'fox', words: ['fox', 'of'] },
+                10: { letters: 'fox', words: ['fox', 'of', 'fo', 'ox', 'xo'] },
             },
             medium: {
                 1: { letters: 'apple', words: ['apple', 'lap', 'pal'] },
@@ -190,7 +179,6 @@
 
         let category = "{{ $category }}";
         let level = parseInt("{{ $level }}");
-        let lives = 10;
         let score = 50;
         let textTwisterScore = {{$player->scores->text_twister_score}};
         let playerId = {{$player->id}};
@@ -209,25 +197,26 @@
         const nextBtn = document.getElementById('next-btn');
 
         function getLevelData() {
-            return levels[category][level];
+            const data = levels[category][level];
+            data.words = data.words.map(word => word.toLowerCase());
+            return data;
         }
 
         function displayJumbledLetters() {
-            const levelData = getLevelData();
-            const jumbled = levelData.letters.split('').sort(() => Math.random() - 0.5).join('');
-            jumbledLettersContainer.textContent = `${jumbled}`;
+            levelData = getLevelData();
+            const jumbled = levelData.letters.split('').sort(() => Math.random() - 0.5).join(' ');
+            jumbledLettersContainer.textContent = jumbled;
         }
 
         function displayWordBoxes() {
-            wordBoxesContainer.innerHTML = ''; // Clear the container
+            wordBoxesContainer.innerHTML = ''; 
             const levelData = getLevelData();
 
             levelData.words.forEach(word => {
-                // Create a container for each word
                 const wordRow = document.createElement('div');
-                wordRow.style.display = 'flex'; // Align letters in a row
-                wordRow.style.justifyContent = 'center'; // Center-align the word
-                wordRow.style.marginBottom = '10px'; // Add spacing between rows
+                wordRow.style.display = 'flex'; 
+                wordRow.style.justifyContent = 'center';
+                wordRow.style.marginBottom = '10px'; 
 
                 word.split('').forEach(() => {
                     const wordBox = document.createElement('div');
@@ -235,7 +224,7 @@
                     wordRow.appendChild(wordBox);
                 });
 
-                wordBoxesContainer.appendChild(wordRow); // Add the row to the container
+                wordBoxesContainer.appendChild(wordRow); 
             });
         }
 
@@ -247,27 +236,28 @@
 
         function checkWord(word) {
             const levelData = getLevelData();
-            
-            if (levelData.words.includes(word) && !foundWords.has(word)) {
-                foundWords.add(word); // Add word to the set
-                textTwisterScore += score; // Update the score
-                scoreElement.textContent = `Score: ${textTwisterScore}`; 
-                updateWordBoxes(word); 
+            word = word.trim().toLowerCase();
 
-                // Check if all words are found
+            if (foundWords.has(word)) {
+                console.log('Word already found:', word);
+                return; // Avoid duplicate entries
+            }
+
+            console.log(`Checking word: "${word}" against ${levelData.words}`);
+            if (levelData.words.includes(word)) {
+                foundWords.add(word);
+                textTwisterScore += score; // Increment score
+                updateWordBoxes(word);
+                updateScores(playerId, score, category, level); // Update UI with the found word
+
                 if (foundWords.size === levelData.words.length) {
-                    showPopup(`Great job! You've found all words! You earned ${textTwisterScore} points.`, true);
-                    updateScores(playerId, score, category, level);
-                }
-            } else {
-                // Handle incorrect word
-                lives--;
-                livesElement.textContent = `Lives: ${lives}`;
-                if (lives === 0) {
-                    showPopup(`Game over! Words were: ${levelData.words.join(', ')}`, false);
+                    showPopup(`Great job! You've found all words!`, true);
                 }
             }
+            
         }
+
+
 
         function updateWordBoxes(word) {
             const levelData = getLevelData();
@@ -276,17 +266,18 @@
             wordContainers.forEach((container, index) => {
                 if (levelData.words[index] === word) {
                     const boxes = container.childNodes;
-                    for (let j = 0; j < boxes.length; j++) {
-                        boxes[j].textContent = word[j]; // Fill each box with the correct letter
-                    }
+                    word.split('').forEach((letter, i) => {
+                        boxes[i].textContent = letter; // Fill each box with the correct letter
+                    });
                 }
             });
         }
 
+
         function showPopup(message, showNextBtn = false) {
             popupContent.textContent = message;
-            popup.style.display = 'block'; // Ensure the popup is visible (not `block` if using Flexbox)
-            nextBtn.style.display = showNextBtn ? 'inline-block' : 'none'; // Show Next button only when needed
+            popup.style.display = 'block'; 
+            nextBtn.style.display = showNextBtn ? 'inline-block' : 'none'; 
         }
 
 
@@ -317,7 +308,6 @@
         }
 
         function resetGame() {
-            lives = 10;
             foundWords.clear();
             displayJumbledLetters();
             displayWordBoxes();
@@ -333,27 +323,35 @@
             }
         });
 
-        nextBtn.addEventListener('click', function () {
-            popup.style.display = 'none'; // Hide the popup
-            level++; // Increment level
+        wordInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                const word = wordInput.value.trim().toLowerCase();
+                if (word) {
+                    checkWord(word);
+                    wordInput.value = '';
+                }
+            }
+        });
 
-            // Check if we need to transition to the next category
+
+        nextBtn.addEventListener('click', function () {
+            popup.style.display = 'none'; 
+            level++; 
+
             if (level > 10) {
                 if (category === 'easy') {
-                    category = 'medium'; // Move to medium category
+                    category = 'medium'; 
                 } else if (category === 'medium') {
-                    category = 'hard'; // Move to hard category
+                    category = 'hard'; 
                 } else {
-                    // All levels completed in hard category
                     showPopup('Congratulations! You completed all levels!', false);
-                    return; // Stop here
+                    return; 
                 }
-                level = 1; // Reset level to 1 for the new category
+                level = 1; 
             }
 
-            // Generate the new URL for the next level
             const newUrl = `/text-twister/${category}/${level}`;
-            window.location.href = newUrl; // Redirect to the next level
+            window.location.href = newUrl; 
         });
 
         resetGame();

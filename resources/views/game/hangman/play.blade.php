@@ -24,9 +24,11 @@
     </div>
     
     <header class="bg-header-gradient py-4 fade-in">
-        <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Hangman {{ $category }} </h1>
-        <p class="text-cream text-lg italic mt-2">Level {{ $level }}</p>
-        <p class="text-crem text-lg italic mt -2">Score <span class="text-gold font-extrabold">{{ $player->scores->hangman_score }}</span></p>
+        <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Hangman</h1>
+        <h2 id="category-level" class="text-3xl font-bold mb-4">
+            {{ ucfirst($category) }} - Level {{ $level }}
+        </h2>
+        <p class="text-crem text-lg italic mt -2">Score: <span class="text-gold font-extrabold">{{ $player->scores->hangman_score }}</span></p>
 
         <div class="mt-4 flex justify-center space-x-4">
             <button onclick="window.location.href='{{ route('hangman.levels', compact('category')) }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
