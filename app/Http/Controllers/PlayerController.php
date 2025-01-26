@@ -32,23 +32,28 @@ class PlayerController extends Controller
             'year_level' => 'required|integer',
             'section' => 'required|string|max:255',
         ]);
-    
+
         $player = new Player();
-    
+
         if ($request->hasFile('profile_picture')) {
             $file = $request->file('profile_picture');
             $filename = time() . '.' . $file->getClientOriginalExtension();
             $file->storeAs('public/profile_pictures', $filename);
-    
-            $player->profile_picture = $filename; 
+
+            $player->profile_picture = $filename;
         }
+<<<<<<< HEAD
         
+=======
+
+        // $validated['profile_picture'] = $request->file('profile_picture')->store('profile_picture');
+>>>>>>> 4a36fa08f8975de6e3f4b77b957afa5008386c81
         $player->user_id = Auth::id();
         $player->username = $validated['username'];
         $player->year_level = $validated['year_level'];
         $player->section = $validated['section'];
         $player->save();
-    
+
         $score = new Score();
         $score->player_id = $player->id;
         $score->overall_score = 0;
@@ -56,7 +61,7 @@ class PlayerController extends Controller
         $score->text_twister_score = 0;
         $score->interactive_novel_score = 0;
         $score->save();
-    
+
         $progress = new Progress();
         $progress->player_id = $player->id;
         $progress->hangman_easy_complete = false;
@@ -78,7 +83,7 @@ class PlayerController extends Controller
         $progress->interactive_novel_medium_level = 0;
         $progress->interactive_novel_hard_level = 0;
         $progress->save();
-    
+
         return redirect()->route('dashboard')->with('success', 'Player profile created successfully.');
     }
 
@@ -96,30 +101,29 @@ class PlayerController extends Controller
             'year_level' => 'required|integer',
             'section' => 'required|string|max:255',
         ]);
-    
+
         $player = Player::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
-    
+
         if ($request->hasFile('profile_picture')) {
             if ($player->profile_picture) {
                 Storage::delete('public/profile_pictures/' . $player->profile_picture);
             }
-    
+
             $file = $request->file('profile_picture');
             $filename = time() . '.' . $file->getClientOriginalExtension();
             $file->storeAs('public/profile_pictures', $filename);
-    
+
             $player->profile_picture = $filename;
         }
-    
+
         $player->username = $request->username;
         $player->year_level = $request->year_level;
         $player->section = $request->section;
-        
+
         $player->save();
-    
-        return redirect()->route('dashboard')->with('success', 'Player profile updated successfully.');
+
+        return redirect()->route('players.details', ['id' => $player])->with('success', 'Player profile updated successfully.');
     }
-    
-    
+
+
 }
-    
