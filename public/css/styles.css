@@ -70,7 +70,6 @@ body {
 .btn-position {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
 }
 .btn-left {
     left: 1rem;

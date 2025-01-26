@@ -31,6 +31,7 @@
         </div>
     </header>
 
+
     <main class="container relative px-6 py-12 mx-auto fade-in">
 
         <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in active" id="chapter1">
@@ -716,16 +717,18 @@ Siyam na araw na nagdiwang ang kaharian. Mas lalo pang umunlad ang Reyno delos C
 reyna.
             </p>
         </div>
+
+        <div class="buttons-container">
+            <button id="prev" class="px-6 py-2 rounded-full shadow-lg btn-gradient text-dark btn-position btn-left" >
+            Previous
+            </button>
+            <button id="next" class="px-6 py-2 rounded-full shadow-lg btn-gradient text-dark btn-position btn-right">
+            Next
+            </button>
+        </div>
     </main>
 
-    <div class="buttons-container">
-        <button id="prev" class="px-6 py-2 rounded-full shadow-lg btn-gradient text-dark btn-position btn-left" >
-        Previous
-        </button>
-        <button id="next" class="px-6 py-2 rounded-full shadow-lg btn-gradient text-dark btn-position btn-right">
-        Next
-        </button>
-    </div>
+
 
     <footer class="py-6 bg-header-gradient">
         <div class="container mx-auto text-center">

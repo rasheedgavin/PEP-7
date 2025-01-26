@@ -4,109 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Hangman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/hangman.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <title>Interactive Novel with Quiz</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
+        /* Custom Colors */
+        .bg-header-gradient {
+            background: linear-gradient(to right, #1e1e1e, #3b2f2f);
+        }
+
+        .bg-body-gradient {
+            background: linear-gradient(to bottom, #5c4033, #3b2f2f);
+        }
+
+        .bg-footer-gradient {
+            background: linear-gradient(to left, #3b2f2f, #1e1e1e);
+        }
+
+        .text-gold {
+            color: #F4D03F;
+        }
+
+        .text-cream {
+            color: #F8F1E8;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(to right, #F4D03F, #8B5E3C);
+            box-shadow: 0 0 10px rgba(244, 208, 63, 0.6);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(244, 208, 63, 0.9);
         }
 
         #game-container {
-            margin-top: 20px;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
         }
-
-        #display-case {
-            position: relative;
-            width: 800px;
-            height: 400px;
-            margin: 0 auto;
-            border: 2px solid #000;
-            overflow: hidden;
-            background-color: #fff;
-        }
-
-        .display-image {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        #passage-container, #question-container {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .answer-options {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .answer-btn {
-            font-size: 16px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        #timer, #score {
-            font-size: 18px;
-            margin-top: 20px;
-        }
-
         .popup {
             display: none;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border: 1px solid #ccc;
-            z-index: 100;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+        .popup #next-btn {
+            margin-top: 1rem;
         }
 
-        .popup-content {
-            margin-bottom: 20px;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
-    <h1>Interactive Novel with Quiz</h1>
-    <button onclick="window.location.href='{{ route('dashboard') }}'">Back</button>
+    <div class="absolute top-4 left-4">
+        <button onclick="window.location='{{ route('dashboard') }}'" 
+            class="btn-gradient text-dark py-2 px-4 rounded-full flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 19l-7-7 7-7v14zm4-14h8v14h-8V5z" />
+            </svg>
+            <span>Back</span>
+        </button>
+    </div>
 
-    <div id="game-container">
-        <div id="display-case">
-            <img id="background-image" src="path/to/background-image.jpg" alt="Background" class="display-image">
-            <img id="character-image" src="path/to/character-image.png" alt="Character" class="display-image">
+    <header class="bg-header-gradient py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Interactive Novel</h1>
+            <h2 class="text-3xl font-bold mt-2">{{ ucfirst($category) }} - Level {{ $level }}</h2>
+            <div id="score" class="mt-2">Score: <span class="font-extrabold text-gold">{{$player->scores->interactive_novel_score}}</span></div>
         </div>
-        <div id="passage-container"></div>
-        <div id="question-container">
-            <p id="question"></p>
-            <div class="answer-options">
-                <button class="answer-btn" data-choice="A">A</button>
-                <button class="answer-btn" data-choice="B">B</button>
-                <button class="answer-btn" data-choice="C">C</button>
-                <button class="answer-btn" data-choice="D">D</button>
+    </header>
+
+    <main class="flex-1 flex items-center justify-center">
+        <div id="game-container" class="bg-header-gradient w-full max-w-4xl rounded-lg shadow-lg p-6">
+            {{-- <div id="display-case" class="relative w-full h-64 mb-6 overflow-hidden rounded-lg">
+                <img id="background-image" src="{{ asset('storage/public/photos/hangbird.jpg') }}" alt="Background" 
+                    class="absolute inset-0 w-full h-full object-cover">
+            </div> --}}
+
+            <div id="passage-container" class="text-cream text-2xl font-medium mb-6"></div>
+
+            <div id="question-container" class="text-center">
+            <p id="question" class="text-gold text-xl font-bold mb-4"></p>
+            <p id="timer" class="mt-2">Time left: 60</p>
             </div>
         </div>
-        <div id="timer">Time left: 60</div>
-        <div id="score">Score: {{$player->scores->interactive_novel_score}} </div>
+    </main>
+
+    <div class="flex justify-center gap-4 mb-10">
+        <button class="answer-btn btn-gradient text-dark px-6 py-3 rounded-full" data-choice="A">A</button>
+        <button class="answer-btn btn-gradient text-dark px-6 py-3 rounded-full" data-choice="B">B</button>
+        <button class="answer-btn btn-gradient text-dark px-6 py-3 rounded-full" data-choice="C">C</button>
+        <button class="answer-btn btn-gradient text-dark px-6 py-3 rounded-full" data-choice="D">D</button>
     </div>
 
     <div id="popup" class="popup">
         <div id="popup-content"></div>
-        <button id="next-btn">Next Level</button>
+        <button id="next-btn" class="btn-gradient">Next Level</button>
     </div>
+
+    <footer class="bg-footer-gradient py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-gold">&copy; 2025 PEP SEVEN. Designed with passion and creativity.</p>
+        </div>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
