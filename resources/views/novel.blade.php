@@ -33,7 +33,7 @@
 
     <main class="container relative px-6 py-12 mx-auto fade-in">
 
-        <div class="p-8 shadow-lg chapter bg-header-gradient rounded-xl fade-in active" id="chapter1">
+        <div class="p-8 shadow-lg chapter bg-light-brown rounded-xl fade-in active" id="chapter1">
             <h2 class="flex text-3xl font-bold text-gold">Kabanata 1: Ang Kahariang Berbanya</h2>
             <p class="mt-4 text-3xl text-cream">Ang kaharian ng Berbanya ay tanyag bilang isang sagana at may payapang pamumuhay. Ang mga piging at pagdiriwang ay madalas na
                 idinaraos sa kaharian ng Berbanya dahil masayahin ang hari’t reyna na namumuno dito na sila Don Fernando at Donya Valeriana.

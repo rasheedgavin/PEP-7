@@ -43,7 +43,6 @@ class PlayerController extends Controller
             $player->profile_picture = $filename;
         }
 
-        // $validated['profile_picture'] = $request->file('profile_picture')->store('profile_picture');
         $player->user_id = Auth::id();
         $player->username = $validated['username'];
         $player->year_level = $validated['year_level'];
@@ -80,7 +79,9 @@ class PlayerController extends Controller
         $progress->interactive_novel_hard_level = 0;
         $progress->save();
 
-        return redirect()->route('dashboard')->with('success', 'Player profile created successfully.');
+        $id = $player->id;
+
+        return redirect()->route('player.details', compact('id'))->with('success', 'Player profile created successfully.');
     }
 
     public function edit($id)
