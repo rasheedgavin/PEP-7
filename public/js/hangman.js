@@ -17,42 +17,58 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         levels: {
             easy: {
-                1: { word: 'cat', description: 'A small domesticated carnivorous mammal.' },
-                2: { word: 'dog', description: 'A domesticated carnivorous mammal that barks.' },
-                3: { word: 'bat', description: 'A flying mammal that uses echolocation.' },
-                4: { word: 'rat', description: 'A medium-sized rodent.' },
-                5: { word: 'bee', description: 'An insect known for producing honey.' },
-                6: { word: 'cow', description: 'A large domesticated bovine animal.' },
-                7: { word: 'pig', description: 'A domesticated swine often kept for meat.' },
-                8: { word: 'hen', description: 'A female chicken.' },
-                9: { word: 'owl', description: 'A nocturnal bird of prey with a flat face.' },
-                10: { word: 'fox', description: 'A small, wild, omnivorous mammal.' }
+                1: { word: 'Adarna', description: 'Isang mahiwagang ibon na may kakayahang magpagaling ng anumang sakit sa pamamagitan ng kanyang nakakaengganyong awit.' },
+                2: { word: 'Berbanya', description: 'Ang kaharian ng mga pangunahing tauhan, pinamumunuan nina Haring Fernando at Reyna Valeriana.' },
+                3: { word: 'Piedras Platas', description: 'Isang mahiwagang puno na may kumikinang na pilak na dahon, tahanan ng Ibong Adarna.' },
+                4: { word: 'Albanya', description: 'Isa pang kaharian na madalas na binabanggit bilang karatig ng Berbanya.' },
+                5: { word: 'Tinudla', description: 'Isang kilos ng pagpanâ o pagtama sa isang bagay gamit ang matalim na sandata tulad ng sibat o pana.' },
+                6: { word: 'Nag-usal', description: 'Ang pagsasabi o pagbibigkas ng mga panalangin o dasal na puno ng taimtim na hangarin.' },
+                7: { word: 'Marilag', description: 'Tumutukoy sa kagandahan at kariktan na umaakit sa sinumang tumitingin.' },
+                8: { word: 'Maharlika', description: 'Nagsasaad ng pagiging marangal o may mataas na antas sa lipunan noong sinaunang panahon.' },
+                9: { word: 'Hilakbot', description: 'Damdamin ng matinding takot na dulot ng isang hindi inaasahang pangyayari.' },
+                10: { word: 'Panibugho', description: 'Ang malalim na anyo ng selos o inggit, na nagdudulot ng poot sa ibang tao.' },
+                11: { word: 'Talim', description: 'Matulis at matalas na bahagi ng anumang bagay, kadalasang ginagamit bilang sandata.' },
+                12: { word: 'Mahiwaga', description: 'Naglalarawan ng isang bagay na hindi maipaliwanag o labis na misteryoso.' },
+                13: { word: 'Kalatas', description: 'Tumutukoy sa isang mensahe o liham na ipinapadala upang magbigay ng mahalagang balita.' },
+                14: { word: 'Paglalakbay', description: 'Isang mahaba at mapanganib na pagpunta sa malalayong lugar upang tuparin ang isang misyon.' },
+                15: { word: 'Pag-uumapaw', description: 'Pagkakaroon ng sobra o lagpas sa inaasahang dami, tulad ng emosyon o tubig.' }
             },
             medium: {
-                1: { word: 'apple', description: 'A sweet, edible fruit from the apple tree.' },
-                2: { word: 'grape', description: 'A small, sweet fruit used to make wine.' },
-                3: { word: 'peach', description: 'A soft, juicy fruit with a fuzzy skin.' },
-                4: { word: 'mango', description: 'A tropical fruit with sweet orange flesh.' },
-                5: { word: 'lemon', description: 'A yellow citrus fruit known for its sour taste.' },
-                6: { word: 'melon', description: 'A large fruit with a sweet, juicy flesh.' },
-                7: { word: 'cherry', description: 'A small, round fruit with a pit, often red or black.' },
-                8: { word: 'banana', description: 'A long, curved fruit with soft flesh inside.' },
-                9: { word: 'papaya', description: 'A tropical fruit with orange flesh and black seeds.' },
-                10: { word: 'guava', description: 'A tropical fruit with green skin and pink or white flesh.' }
+                1: { word: 'Masangsang', description: 'Isang hindi kaaya-ayang amoy na nakakairita sa pang-amoy.' },
+                2: { word: 'Pangarapin', description: 'Isang marubdob na pagnanasa o hangarin na abutin ang isang layunin.' },
+                3: { word: 'Ipinagkanulo', description: 'Ang pagkilos ng pagtaksil o paglilinlang sa isang tao o grupo.' },
+                4: { word: 'Liyag', description: 'Isang salita para sa minamahal o iniibig.' },
+                5: { word: 'Makaliligtas', description: 'Kakayahang makaiwas sa anumang panganib o kapahamakan.' },
+                6: { word: 'Panghihinayang', description: 'Pagsisisi na dulot ng pagkawala ng pagkakataon o mahalagang bagay.' },
+                7: { word: 'Sinagoga', description: 'Isang banal na lugar ng pagsamba na madalas ginagamit bilang kanlungan.' },
+                8: { word: 'Nag-anyaya', description: 'Pagkilos ng pag-imbita sa iba upang dumalo sa isang mahalagang okasyon.' },
+                9: { word: 'Tinugon', description: 'Pagsagot sa tanong o pagtugon sa isang panawagan.' },
+                10: { word: 'Kariktan', description: 'Kakaibang kagandahan na kapansin-pansin at kahanga-hanga.' },
+                11: { word: 'Kasamaan', description: 'Mga kilos na labag sa kagandahang-asal o moralidad.' },
+                12: { word: 'Kasawian', description: 'Ang karanasan ng kabiguan o matinding kamalasan sa buhay.' },
+                13: { word: 'Kaligayahan', description: 'Matinding tuwa na nararamdaman mula sa tagumpay o magandang karanasan.' },
+                14: { word: 'Masukal', description: 'Mataba at makapal na lugar na puno ng halaman o gubat.' },
+                15: { word: 'Naglalayag', description: 'Isang paglalakbay sa karagatan gamit ang bangka o barko.' }
             },
             hard: {
-                1: { word: 'elephant', description: 'A large mammal with a trunk.' },
-                2: { word: 'dinosaur', description: 'A diverse group of extinct reptiles.' },
-                3: { word: 'kangaroo', description: 'A marsupial native to Australia.' },
-                4: { word: 'platypus', description: 'A mammal that lays eggs and has a duck-like bill.' },
-                5: { word: 'rhinoceros', description: 'A large herbivorous mammal with a horn on its nose.' },
-                6: { word: 'alligator', description: 'A large reptile with a broad snout, found in the Americas.' },
-                7: { word: 'crocodile', description: 'A large predatory reptile found in tropical regions.' },
-                8: { word: 'chameleon', description: 'A reptile known for its ability to change color.' },
-                9: { word: 'hedgehog', description: 'A small mammal with spines on its back.' },
-                10: { word: 'salamander', description: 'An amphibian with a lizard-like appearance.' }
+                1: { word: 'Nagmumuni', description: 'Pag-iisip nang malalim upang pagnilayan ang mga pangyayari.' },
+                2: { word: 'Mapanglaw', description: 'Kalungkutan na dulot ng katahimikan o pagkawala.' },
+                3: { word: 'Habilin', description: 'Ang mga bilin o utos na iniwan ng isang mahalagang tao.' },
+                4: { word: 'Mapagmataas', description: 'Pagkilos na nagpapakita ng kayabangan o pagiging hambog.' },
+                5: { word: 'Kawal', description: 'Sundalo na naglilingkod bilang tagapagtanggol ng kaharian.' },
+                6: { word: 'Nasiphayo', description: 'Nawalan ng pag-asa o nadismaya dahil sa kabiguan.' },
+                7: { word: 'Masilakbo', description: 'Biglaan at marahas na damdamin tulad ng galit o pagnanasa.' },
+                8: { word: 'Tampok', description: 'Isang bagay o tao na kilala o nagbibigay ng pansin.' },
+                9: { word: 'Pag-ayop', description: 'Pagpapakita ng paghamak o pag-alipusta sa iba.' },
+                10: { word: 'Pagyuko', description: 'Pagpapakumbaba o pagsuko sa isang mas mataas na kapangyarihan.' },
+                11: { word: 'Lilo', description: 'Isang tao na traydor o taksil.' },
+                12: { word: 'Panata', description: 'Isang pangako o taimtim na panalangin para sa isang hangarin.' },
+                13: { word: 'Takipsilim', description: 'Oras ng dapithapon bago lubusang dumilim ang paligid.' },
+                14: { word: 'Pagkamuhi', description: 'Matinding galit o poot sa isang tao o bagay.' },
+                15: { word: 'Pighati', description: 'Matinding lungkot o dalamhati na dulot ng malalim na sugat sa damdamin.' }
             }
         }
+        
     };
 
     function initGame(category, level, hangmanScore, playerId) {

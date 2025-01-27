@@ -89,7 +89,7 @@
             <h2 class="text-3xl font-bold text-gold mt-4">{{ $player->users->username }}</h2>
 
             <button class="mt-6 btn-gradient text-dark px-6 py-2 rounded-full">
-                <a href="{{ route('players.edit', compact('id')) }}">Edit Profile</a>
+                <a href="{{ route('player.edit', compact('id')) }}">Edit Profile</a>
             </button>
         </div>
 

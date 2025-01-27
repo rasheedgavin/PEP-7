@@ -49,7 +49,7 @@
     <div class="w-full max-w-lg bg-header-gradient p-8 rounded-lg shadow-lg">
         <h1 class="text-gold text-3xl font-bold mb-6 text-center">Create Player Profile</h1>
         
-        <form action="{{ route('players.store') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
+        <form action="{{ route('player.store') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
             @csrf
             
             <div>

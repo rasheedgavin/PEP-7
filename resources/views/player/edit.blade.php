@@ -65,7 +65,7 @@
             <h1 class="text-gold text-4xl font-extrabold uppercase tracking-wide">Player Profile & Settings</h1>
         </div>
         <div class="absolute top-4 left-4 fade-in">
-            <button onclick="window.location='{{ route('players.details', compact('id')) }}'"
+            <button onclick="window.location='{{ route('player.details', compact('id')) }}'"
                 class="flex items-center px-4 py-2 space-x-2 transition rounded-full shadow-lg btn-gradient text-dark">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M10 19l-7-7 7-7v14zm4-14h8v14h-8V5z"/>
@@ -94,7 +94,7 @@
         <section id="edit-profile" class="space-y-8">
             <section class="bg-header-gradient p-6 rounded-lg shadow-lg">
                 <h2 class="text-gold text-2xl font-bold mb-4">Edit Profile</h2>
-                <form action="{{ route('players.update', $player->id) }}" method="POST" enctype="multipart/form-data" class="space-y-4">
+                <form action="{{ route('player.update', $player->id) }}" method="POST" enctype="multipart/form-data" class="space-y-4">
                     @csrf
                     @method('PATCH')
                     <div>
