@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login & Register</title>
+    <style>
+    </style>
 </head>
-<body>
+<body class="bg-body-gradient text-cream">
 <main>
     <aside>
         <div>
@@ -13,7 +15,6 @@
         </div>
         <p>Get ready to sharpen your mind and enjoy every word!</p>
         <p>Access your account or create a new one to get started.</p>
-
     </aside>
 
     @if (Route::has('login'))
