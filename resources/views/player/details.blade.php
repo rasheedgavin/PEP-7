@@ -97,6 +97,7 @@
             <h2 class="text-3xl font-bold text-gold border-b border-gold pb-2">Profile Details</h2>
             <div class="mt-6">
                 <p class="text-lg"><strong class="text-gold">Name:</strong> {{ $player->users->name }}</p>
+                <p class="text-lg"><strong class="text-gold">Userame:</strong> {{ $player->username }}</p>
                 <p class="text-lg"><strong class="text-gold">Email:</strong> {{ $player->users->email }}</p>
                 <p class="text-lg"><strong class="text-gold">Year Level:</strong> {{ $player->year_level }}</p>
                 <p class="text-lg"><strong class="text-gold">Section:</strong> {{ $player->section }}</p>

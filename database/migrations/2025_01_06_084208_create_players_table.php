@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('profile_picture')->nullable();
-            $table->string('username');
+            $table->string('username')->unique();
             $table->integer('year_level');
             $table->string('section');
             $table->timestamps();

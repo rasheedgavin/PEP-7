@@ -28,7 +28,7 @@ class PlayerController extends Controller
     {
         $validated = $request->validate([
             'profile_picture' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
-            'username' => 'required|string|max:255',
+            'username' => 'required|string|max:255|unique:players',
             'year_level' => 'required|integer',
             'section' => 'required|string|max:255',
         ]);
@@ -95,7 +95,7 @@ class PlayerController extends Controller
     {
         $request->validate([
             'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'username' => 'required|string|max:255',
+            'username' => 'required|string|max:255|unique:players',
             'year_level' => 'required|integer',
             'section' => 'required|string|max:255',
         ]);
