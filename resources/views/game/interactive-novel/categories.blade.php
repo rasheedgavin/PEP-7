@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Novel Levels</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{{ asset('css/hangman.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/game.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-body-gradient text-cream min-h-screen flex flex-col justify-between">

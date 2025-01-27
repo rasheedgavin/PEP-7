@@ -11,7 +11,7 @@ class GameController extends Controller
     {
         $player = Player::where('user_id', Auth::id())->first();
         if (!$player) {
-            return redirect()->route('players.create')->with('error', 'Please create a profile first.');
+            return redirect()->route('player.create')->with('error', 'Please create a profile first.');
         }
 
         $progress = $player->progress;
@@ -22,7 +22,7 @@ class GameController extends Controller
     {
         $player = Player::where('user_id', Auth::id())->first();
         if (!$player) {
-            return redirect()->route('players.create')->with('error', 'Please create a profile first.');
+            return redirect()->route('player.create')->with('error', 'Please create a profile first.');
         }
 
         $validCategories = ['easy', 'medium', 'hard'];
@@ -39,14 +39,14 @@ class GameController extends Controller
     {
         $player = Player::where('user_id', Auth::id())->first();
         if (!$player) {
-            return redirect()->route('players.create')->with('error', 'Please create a profile first.');
+            return redirect()->route('player.create')->with('error', 'Please create a profile first.');
         }
 
         $validCategories = ['easy', 'medium', 'hard'];
         if (!in_array($category, $validCategories) || $level < 1 || $level > 10) {
             abort(404, 'Invalid level or category');
         }
-        
+
         $progress = $player->progress;
         $unlockedLevelKey = "hangman_{$category}_level";
         $unlockedLevel = $progress->{$unlockedLevelKey} ?? 0;
@@ -65,7 +65,7 @@ class GameController extends Controller
         $player = Player::where('user_id', Auth::id())->first();
 
         if (!$player) {
-            return redirect()->route('players.create')->confirm('error', 'Please create a profile first.');
+            return redirect()->route('player.create')->confirm('error', 'Please create a profile first.');
         }
 
         $progress = $player->progress; 
@@ -79,7 +79,7 @@ class GameController extends Controller
         $player = Player::where('user_id', Auth::id())->first();
 
         if (!$player) {
-            return redirect()->route('players.create')->with('error', 'Please create a profile first.');
+            return redirect()->route('player.create')->with('error', 'Please create a profile first.');
         }
 
         $validCategories = ['easy', 'medium', 'hard'];
@@ -98,7 +98,7 @@ class GameController extends Controller
     {
         $player = Player::where('user_id', Auth::id())->first();
         if (!$player) {
-            return redirect()->route('players.create')->with('error', 'Please create a profile first.');
+            return redirect()->route('player.create')->with('error', 'Please create a profile first.');
         }
 
         $progress = $player->progress;
@@ -124,7 +124,7 @@ class GameController extends Controller
         $player = Player::where('user_id', Auth::id())->first();
 
         if (!$player) {
-            return redirect()->route('players.create')->with('error', 'Please create a profile first.');
+            return redirect()->route('player.create')->with('error', 'Please create a profile first.');
         }
 
         $progress = $player->progress; 
@@ -138,7 +138,7 @@ class GameController extends Controller
         $player = Player::where('user_id', Auth::id())->first();
 
         if (!$player) {
-            return redirect()->route('players.create')->with('error', 'Please create a profile first.');
+            return redirect()->route('player.create')->with('error', 'Please create a profile first.');
         }
 
         $validCategories = ['easy', 'medium', 'hard'];
@@ -157,7 +157,7 @@ class GameController extends Controller
     {
         $player = Player::where('user_id', Auth::id())->first();
         if (!$player) {
-            return redirect()->route('players.create')->with('error', 'Please create a profile first.');
+            return redirect()->route('player.create')->with('error', 'Please create a profile first.');
         }
     
         $validCategories = ['easy', 'medium', 'hard'];
