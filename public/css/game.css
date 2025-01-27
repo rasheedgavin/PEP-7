@@ -147,3 +147,25 @@ canvas {
 .popup #next-btn {
     margin-top: 1rem;
 }
+
+#word-boxes-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 15px; 
+    margin: 20px 0;
+}
+
+.word-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #F4D03F, #8B5E3C);
+    color: #1e1e1e;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}

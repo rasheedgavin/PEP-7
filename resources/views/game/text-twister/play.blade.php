@@ -6,87 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Text Twister</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{{ asset('css/hangman.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/game.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        .bg-header-gradient {
-            background: linear-gradient(to right, #1e1e1e, #3b2f2f);
-        }
-        .bg-body-gradient {
-            background: linear-gradient(to bottom, #5c4033, #3b2f2f);
-        }
-        .bg-footer-gradient {
-            background: linear-gradient(to left, #3b2f2f, #1e1e1e);
-        }
-        .text-gold {
-            color: #F4D03F;
-        }
-        .text-cream {
-            color: #F8F1E8;
-        }
-        .btn-gradient {
-            background: linear-gradient(to right, #F4D03F, #8B5E3C);
-            box-shadow: 0 0 10px rgba(244, 208, 63, 0.6);
-            transition: transform 0.2s ease, box-shadow 0.3s ease;
-        }
-        .btn-gradient:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(244, 208, 63, 0.9);
-        }
-        
-        #game-container{
-            width: 800px; 
-            height: 600px; 
-            margin: 2rem auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-        }
-
-        #word-boxes-container {
-            display: flex;
-            flex-direction: column; 
-            align-items: center;
-            gap: 15px; 
-            margin: 20px 0;
-        }
-
-        .word-box {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(to bottom, #F4D03F, #8B5E3C);
-            color: #1e1e1e;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-        }
-        .popup #next-btn {
-            margin-top: 1rem;
-        }
-
-    </style>
 </head>
 <body>
     <div class="absolute top-4 left-4">
@@ -140,42 +61,43 @@
     document.addEventListener('DOMContentLoaded', function () {
         const levels = {
             easy: {
-                1: { letters: 'cat', words: ['cat', 'at', 'act'] },
-                2: { letters: 'dog', words: ['dog', 'do', 'go'] },
-                3: { letters: 'bat', words: ['bat', 'at', 'tab'] },
-                4: { letters: 'rat', words: ['rat', 'at', 'art'] },
-                5: { letters: 'bee', words: ['bee', 'be'] },
-                6: { letters: 'cow', words: ['cow', 'ow', 'wo'] },
-                7: { letters: 'pig', words: ['pig', 'pi'] },
-                8: { letters: 'hen', words: ['hen', 'he'] },
-                9: { letters: 'owl', words: ['owl', 'wo', 'low'] },
-                10: { letters: 'fox', words: ['fox', 'of', 'fo', 'ox', 'xo'] },
+                1: { letters: 'skala', words: ['kasal', 'lakas', 'sakal', 'sala'] },
+                2: { letters: 'gungobant', words: ['bangungot', 'bano', 'bango', 'utot',] },
+                3: { letters: 'gapmnatog', words: ['panggamot', 'gamot', 'maga', 'tao'] },
+                4: { letters: 'sahankanuday', words: ['nakahandusay', 'anak', 'akay', 'asa'] },
+                5: { letters: 'waggawakakagnaa', words: ['pagkakawanggawa', 'gawa', 'gagawa', 'paggawa'] },
+                6: { letters: 'ksiamhgi', words: ['himagsik', 'higa', 'himig', 'gimik'] },
+                7: { letters: 'hmalai', words: ['himala', 'hila', 'mali', 'lima'] },
+                8: { letters: 'aobnnigdraa', words: ['ibong', 'adarna', 'darna', 'ibon'] },
+                9: { letters: 'bnaiughop', words: ['panibugho', 'baho', 'puno', 'gabi'] },
+                10: { letters: 'mnaakapygriahain', words: ['makapangyarihan', 'kapangyarihan', 'hari', 'panig'] },
             },
             medium: {
-                1: { letters: 'apple', words: ['apple', 'lap', 'pal'] },
-                2: { letters: 'grape', words: ['grape', 'gap', 'rage'] },
-                3: { letters: 'peach', words: ['peach', 'cap', 'ace'] },
-                4: { letters: 'mango', words: ['mango', 'man', 'go'] },
-                5: { letters: 'lemon', words: ['lemon', 'mole', 'no'] },
-                6: { letters: 'melon', words: ['melon', 'one', 'men'] },
-                7: { letters: 'cherry', words: ['cherry', 'cry', 'her'] },
-                8: { letters: 'banana', words: ['banana', 'ban', 'nan'] },
-                9: { letters: 'papaya', words: ['papaya', 'pay', 'pa'] },
-                10: { letters: 'guava', words: ['guava', 'vag', 'ava'] },
+                1: { letters: 'kansatulan', words: ['natuklasan', 'sala', 'sana', 'tuklas'] },
+                2: { letters: 'wandugakan', words: ['nakadungaw', 'dungaw', 'gawa', 'nawa'] },
+                3: { letters: 'naligumhan', words: ['nahumaling', 'mali', 'lima', 'alin'] },
+                4: { letters: 'bagmanangana', words: ['nangangamba', 'banga', 'gana', 'mana'] },
+                5: { letters: 'kinsiling', words: ['lingkisin', 'linis', 'lingkis', 'sila'] },
+                6: { letters: 'pasantalma', words: ['tampalasan', 'sala', 'saan', 'sapa'] },
+                7: { letters: 'anapinabula', words: ['pinabulaanan', 'pabulaanan', 'laban', 'lapa'] },
+                8: { letters: 'tingangining', words: ['nangingitngit', 'nginig', 'ngitngit', 'tingi'] },
+                9: { letters: 'binkulpiga', words: ['pinagkubli', 'kubli', 'bili', 'pula'] },
+                10: { letters: 'nawgurunda', words: ['durungawan', 'dawag', 'gawa', 'gana'] },
             },
             hard: {
-                1: { letters: 'elephant', words: ['elephant', 'tent', 'pen'] },
-                2: { letters: 'dinosaur', words: ['dinosaur', 'rad', 'sand'] },
-                3: { letters: 'kangaroo', words: ['kangaroo', 'ran', 'oak'] },
-                4: { letters: 'platypus', words: ['platypus', 'play', 'tap'] },
-                5: { letters: 'rhinoceros', words: ['rhinoceros', 'rose', 'horn'] },
-                6: { letters: 'alligator', words: ['alligator', 'tail', 'go'] },
-                7: { letters: 'crocodile', words: ['crocodile', 'cold', 'ride'] },
-                8: { letters: 'chameleon', words: ['chameleon', 'man', 'calm'] },
-                9: { letters: 'hedgehog', words: ['hedgehog', 'hog', 'dog'] },
-                10: { letters: 'salamander', words: ['salamander', 'sand', 'land'] },
+                1: { letters: 'salpagang', words: ['pagpaslang', 'paslang', 'lasa', 'langgas', 'sapa',] },
+                2: { letters: 'hkaarnia', words: ['kaharian', 'hari', 'arian', 'hara'] },
+                3: { letters: 'hasnainkampina', words: ['kinapamihasnan', 'pinamihasa', 'minasa', 'mahina'] },
+                4: { letters: 'alkagitsatp', words: ['pagtataksil', 'taksil', 'sila', 'sikat'] },
+                5: { letters: 'gpagibi', words: ['pagibig', 'ibig', 'igibi', 'gabi'] },
+                6: { letters: 'mgaiski', words: ['makisig', 'siga', 'kisig', 'siga'] },
+                7: { letters: 'ibakalans', words: ['kalabisan', 'lana', 'labis', 'labi'] },
+                8: { letters: 'papygapuoalt', words: ['pagpapatuloy', 'patuloy', 'toy', 'toyo'] },
+                9: { letters: 'mapanggial', words: ['mapagaling', 'magaling', 'galing', 'linga'] },
+                10: { letters: 'bagukaant', words: ['kagubatan', 'bata', 'gubat', 'ugat'] },
             },
         };
+
 
         let category = "{{ $category }}";
         let level = parseInt("{{ $level }}");
@@ -246,9 +168,9 @@
             console.log(`Checking word: "${word}" against ${levelData.words}`);
             if (levelData.words.includes(word)) {
                 foundWords.add(word);
-                textTwisterScore += score; // Increment score
+                textTwisterScore += score; 
                 updateWordBoxes(word);
-                updateScores(playerId, score, category, level); // Update UI with the found word
+                updateScores(playerId, score, category, level); 
 
                 if (foundWords.size === levelData.words.length) {
                     showPopup(`Great job! You've found all words!`, true);
@@ -267,7 +189,7 @@
                 if (levelData.words[index] === word) {
                     const boxes = container.childNodes;
                     word.split('').forEach((letter, i) => {
-                        boxes[i].textContent = letter; // Fill each box with the correct letter
+                        boxes[i].textContent = letter;
                     });
                 }
             });
