@@ -4,65 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Twister Levels</title>
+    <link rel="stylesheet" href="{{ asset('css/game.css') }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom Colors */
-        .text-gold {
-            color: #F4D03F;
-        }
-        .bg-header-gradient {
-            background: linear-gradient(to right, #1e1e1e, #3b2f2f);
-        }
-        .bg-footer-gradient {
-            background: linear-gradient(to left, #3b2f2f, #1e1e1e);
-        }
-        .bg-body-gradient {
-            background: linear-gradient(to bottom, #5c4033, #3b2f2f);
-        }
-        .text-cream {
-            color: #F8F1E8;
-        }
-        .btn-gradient {
-            background: linear-gradient(to right, #F4D03F, #8B5E3C);
-            box-shadow: 0 0 10px rgba(244, 208, 63, 0.6);
-            transition: transform 0.2s ease, box-shadow 0.3s ease;
-        }
-        .btn-gradient:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(244, 208, 63, 0.9);
-        }
-        body {
-            font-family: 'Cinzel', serif;
-        }
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .card:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        .locked {
-            background: linear-gradient(to right, #5c4033, #3b2f2f);
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-    </style>
 </head>
 <body class="bg-body-gradient text-cream min-h-screen flex flex-col justify-between">
 
-    <!-- Back Button -->
     <div class="absolute top-4 left-4 fade-in">
         <button onclick="window.location='{{ route('dashboard') }}'"
             class="btn-gradient text-dark py-2 px-4 rounded-full shadow-lg flex items-center space-x-2 transition">
@@ -101,7 +48,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
         document.querySelectorAll('.card').forEach(levelEl => {
             const category = "{{ $category }}";

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Levels</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{{ asset('css/hangman.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/game.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
   
 </head>
@@ -36,7 +36,7 @@
 
     <main class="container mx-auto px-6 py-12 fade-in">
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-            @for ($i = 1; $i <= 10; $i++)
+            @for ($i = 1; $i <= 15; $i++)
                 <div 
                     class="card bg-header-gradient shadow-lg rounded-lg p-4 text-center text-gold font-bold text-2xl cursor-pointer transform transition 
                            {{ $progress->hangman_level_unlocked($category, $i) ? '' : 'locked' }}"
