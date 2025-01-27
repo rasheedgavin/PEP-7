@@ -7,7 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Colors and Gradients */
         .text-gold {
             color: #F4D03F;
         }
@@ -56,7 +55,7 @@
         html, body {
             height: 100%;
             margin: 0;
-            background: #3b2f2f; /* Full-screen dark brown background */
+            background: #3b2f2f; 
         }
         footer {
             position: relative;
