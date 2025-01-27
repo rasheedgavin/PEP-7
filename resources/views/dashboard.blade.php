@@ -69,7 +69,7 @@
     <main class="container mx-auto px-6 py-12 fade-in">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-light-brown shadow-lg rounded-xl overflow-hidden card relative">
-                <img src="https://th.bing.com/th/id/OIP.AJg04AJ_dXPU11MA68apVAHaFQ?w=275&h=195&c=7&r=0&o=5&dpr=1.6&pid=1.7" alt="Hangman Game" class="w-full h-80 object-cover">
+                <img src="https://t3.ftcdn.net/jpg/07/86/12/28/360_F_786122837_P7aBPLCHhpsCb0JxvifmC8oOwRE47S6c.jpg" alt="Hangman Game" class="w-full h-80 object-cover">
                 <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6">
                     <h2 class="text-gold text-3xl font-bold">Hangman</h2>
                     <p class="text-sm text-white mb-4">Hulaan ang mga salita at lutasin ang palaisipan!</p>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="bg-light-brown shadow-lg rounded-xl overflow-hidden card relative">
-                <img src="https://th.bing.com/th/id/OIP.s95Ez3X8wjxD1LS7FXLnOwAAAA?rs=1&pid=ImgDetMain" alt="Hangman Game" class="w-full h-80 object-cover">
+                <img src="https://images.nightcafe.studio/jobs/jWlhCFfFvz5bKFnyONJz/jWlhCFfFvz5bKFnyONJz--3--n68pg_2x.jpg" alt="Hangman Game" class="w-full h-80 object-cover">
                 <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6">
                     <h2 class="text-gold text-3xl font-bold">Text Twister</h2>
                     <p class="text-sm text-white mb-4">Bumuo ng mga salita mula sa letra!</p>
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="bg-light-brown shadow-lg rounded-xl overflow-hidden card relative">
-                <img src="https://th.bing.com/th/id/OIP.ZzKZmju4FPuszAPk4RkQWQHaFj?pid=ImgDet&w=192&h=144&c=7&dpr=1.6" alt="Hangman Game" class="w-full h-80 object-cover">
+                <img src="https://t4.ftcdn.net/jpg/07/69/29/09/360_F_769290955_MwDs8zK9PF63AOs0JHggjOYaeOPxuKKW.jpg" alt="Hangman Game" class="w-full h-80 object-cover">
                 <div class="absolute inset-0 card-overlay flex flex-col justify-end p-6">
                     <h2 class="text-gold text-3xl font-bold">Interactive Novel</h2>
                     <p class="text-sm text-white mb-4">Sumabak sa isang kapanapanabik na mga kwento at tanong!</p>
