@@ -120,10 +120,6 @@ class PlayerController extends Controller
 
         $player->save();
 
-        $id = $player->id;
-
-        return redirect()->route('players.details', compact('id'))->with('success', 'Player profile updated successfully.');
+        return redirect()->route('players.details', ['id' => $player])->with('success', 'Player profile updated successfully.');
     }
-
-
 }

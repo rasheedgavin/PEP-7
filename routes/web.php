@@ -29,11 +29,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/leaderboards/hangman/{id}', [LeaderboardController::class, 'viewHangmanScore'])->name('leaderboards.hangman');
     Route::get('/leaderboards/text-twister/{id}', [LeaderboardController::class, 'viewTextTwisterScore'])->name('leaderboards.text-twister');
     Route::get('/leaderboards/interactive-novel/{id}', [LeaderboardController::class, 'viewInteractiveNovelScore'])->name('leaderboards.interactive-novel');
-    Route::get('/players/{id}/details', [PlayerController::class, 'index'])->name('players.details');
-    Route::get('/players/create', [PlayerController::class, 'create'])->name('players.create');
-    Route::post('/players', [PlayerController::class, 'store'])->name('players.store');
-    Route::get('/players/{id}/edit', [PlayerController::class, 'edit'])->name('players.edit');
-    Route::patch('/players/{id}/details', [PlayerController::class, 'update'])->name('players.update');
+    Route::get('/players/{id}/details', [PlayerController::class, 'index'])->name('player.details');
+    Route::get('/players/create', [PlayerController::class, 'create'])->name('player.create');
+    Route::post('/players', [PlayerController::class, 'store'])->name('player.store');
+    Route::get('/players/{id}/edit', [PlayerController::class, 'edit'])->name('player.edit');
+    Route::patch('/players/{id}', [PlayerController::class, 'update'])->name('player.update');
     Route::get('/hangman', [GameController::class, 'hangmanCategories'])->name('hangman.categories');
     Route::get('/hangman/{category}', [GameController::class, 'hangmanLevels'])->name('hangman.levels');
     Route::get('/hangman/{category}/{level}', [GameController::class, 'playHangmanLevel'])->name('hangman.play');
@@ -49,5 +49,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/achievements/view/{id}', [AchievementsController::class, 'view'])->name('achievements.view');
     Route::get('/novel/view', [DashboardController::class, 'viewNovel'])->name('novel.view');
 });
+
 
 require __DIR__.'/auth.php';
