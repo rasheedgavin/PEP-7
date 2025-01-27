@@ -81,13 +81,14 @@ class PlayerController extends Controller
 
         $id = $player->id;
 
-        return redirect()->route('player.details', compact('id'))->with('success', 'Player profile created successfully.');
+        return redirect()->route('players.details', compact('id'))->with('success', 'Player profile created successfully.');
     }
 
     public function edit($id)
     {
         $player = Player::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
-        return view('player.edit', compact('player'));
+        $id = $player->id;
+        return view('player.edit', compact('player', 'id'));
     }
 
     public function update(Request $request, $id)

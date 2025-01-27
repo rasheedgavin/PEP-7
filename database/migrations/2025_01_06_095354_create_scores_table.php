@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('scores', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('player_id')->constrained('players');
+            $table->foreignId('player_id')->constrained('players')->onDelete('cascade');
             $table->integer('overall_score');
             $table->integer('hangman_score');
             $table->integer('text_twister_score');

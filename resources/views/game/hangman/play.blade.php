@@ -12,17 +12,7 @@
         const imageUrl = "{{ asset('storage/public/photos/hangbird.jpg') }}";
     </script>
 </head>
-<body>
-    <div class="absolute top-4 left-4 fade-in">
-        <button onclick="window.location='{{ route('dashboard') }}'"
-            class="btn-gradient text-dark py-2 px-4 rounded-full shadow-lg flex items-center space-x-2 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M10 19l-7-7 7-7v14zm4-14h8v14h-8V5z"/>
-            </svg>
-            <span>Back</span>
-        </button>
-    </div>
-    
+<body> 
     <header class="bg-header-gradient py-4 fade-in">
         <h1 class="text-gold text-5xl font-extrabold uppercase tracking-wide">Hangman</h1>
         <h2 id="category-level" class="text-3xl font-bold mb-4">
@@ -33,6 +23,15 @@
         <div class="mt-4 flex justify-center space-x-4">
             <button onclick="window.location.href='{{ route('hangman.levels', compact('category')) }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
                 Levels
+            </button>
+        </div>
+        <div class="absolute top-4 left-4 fade-in">
+            <button onclick="window.location='{{ route('dashboard') }}'"
+                class="btn-gradient text-dark py-2 px-4 rounded-full shadow-lg flex items-center space-x-2 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M10 19l-7-7 7-7v14zm4-14h8v14h-8V5z"/>
+                </svg>
+                <span>Back</span>
             </button>
         </div>
     </header>
@@ -50,7 +49,7 @@
     </div>
 
     <footer class="bg-footer-gradient py-4 mt-8">
-        <p class="text-gold fade-in">&copy; 2025 Hangman Game.</p>
+        <p class="text-gold fade-in">&copy; 2025 PEP7.</p>
     </footer>
 
     <div id="popup" class="popup">

@@ -131,7 +131,7 @@
     </div>
     
     <footer class="bg-footer-gradient py-4 mt-8">
-        <p class="text-gold fade-in">&copy; 2025 Hangman Game.</p>
+        <p class="text-gold fade-in">&copy; 2025 PEP7.</p>
     </footer>
 
 </body>

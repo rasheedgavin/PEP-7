@@ -24,6 +24,10 @@
 }
 body {
     font-family: 'Cinzel', serif;
+    background: linear-gradient(to bottom, #5c4033, #3b2f2f);
+    color: #F8F1E8;
+    text-align: center;
+    min-height: 100vh;
 }
 .header-underline {
     border-bottom: 3px solid #F4D03F;
