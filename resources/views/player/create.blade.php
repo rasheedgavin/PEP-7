@@ -65,11 +65,6 @@
         
         <form action="{{ route('player.store') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
             @csrf
-            
-            <div>
-                <label for="profile_picture" class="block text-gold mb-2">Profile Picture</label>
-                <input type="file" name="profile_picture" id="profile_picture" accept="image/*" class="input-field">
-            </div>
 
             <div>
                 <label for="username" class="block text-gold mb-2">Username</label>
@@ -90,7 +85,7 @@
                 <button type="submit" class="btn-gradient text-dark px-6 py-3 rounded-full">Create Profile</button>
             </div>
         </form>
-        
+
         <footer class="py-6 bg-footer-gradient">
             <div class="container mx-auto text-center">
                 <p class="text-gold">&copy; 2025 PEP SEVEN.</p>
