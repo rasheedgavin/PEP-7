@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login & Register</title>
     <style>
-        /* Basic reset */
+       
         * {
             margin: 0;
             padding: 0;
@@ -16,7 +16,7 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            height: 100vh; /* Full viewport height */
+            height: 100vh; 
             color: #fff;
             justify-content: center;
             align-items: center;
@@ -27,7 +27,7 @@
             display: flex;
             width: 100%;
             height: 100%;
-            max-width: none; /* Allow it to stretch fully */
+           
         }
 
         
@@ -74,7 +74,7 @@
             background-color: #5383dd;
         }
 
-        /* Bottom centered PEP-7 text in aside */
+     
         .aside-footer {
             margin-top: 30px;
             font-size: 1.5rem;
