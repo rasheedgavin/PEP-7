@@ -103,16 +103,7 @@
         
     </header>
 
-    <main class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 fade-in">
-        <div class="achievement-card">
-            <h2 class="text-gold text-3xl font-bold achievement-header">Scores</h2>
-            <ul class="text-lg">
-                <li>Hangman Score: <span class="achievement-value">{{ $player->scores->hangman_score }}</span></li>
-                <li>Text Twister Score: <span class="achievement-value">{{ $player->scores->text_twister_score }}</span></li>
-                <li>Interactive Novel Score: <span class="achievement-value">{{ $player->scores->interactive_novel_score }}</span></li>
-                <li>Overall Score: <span class="achievement-value">{{ $player->scores->overall_score }}</span></li>
-            </ul>
-        </div>
+    <main class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg gap-8 fade-in">
 
         <div class="achievement-card">
             <h2 class="text-gold text-3xl font-bold achievement-header">Levels Completed</h2>

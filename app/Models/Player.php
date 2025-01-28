@@ -13,7 +13,6 @@ class Player extends Model
 
     protected $fillable = [
         'user_id',
-        'profile_picture',
         'username',
         'year_level',
         'section',

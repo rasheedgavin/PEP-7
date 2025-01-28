@@ -79,11 +79,6 @@
 
         <section class="text-center">
             <div class="flex flex-col items-center">
-                @if($player->profile_picture)
-                    <img src="{{ asset('storage/public/profile_pictures/' . $player->profile_picture) }}" alt="Profile Picture" class="rounded-full w-36 h-36 profile-picture mb-4">
-                @else
-                    <img src="{{ asset('storage/public/photos/default-avatar.jpg') }}" alt="Default Avatar" class="rounded-full w-36 h-36 profile-picture mb-4">
-                @endif
                 <h2 class="text-3xl font-bold text-gold">{{ $player->users->username }}</h2>
                 <p class="text-lg mt-2"><strong class="text-gold">Email:</strong> {{ $player->users->email }}</p>
                 <p class="text-lg"><strong class="text-gold">Year Level:</strong> {{ $player->year_level }}</p>
@@ -94,20 +89,9 @@
         <section id="edit-profile" class="space-y-8">
             <section class="bg-header-gradient p-6 rounded-lg shadow-lg">
                 <h2 class="text-gold text-2xl font-bold mb-4">Edit Profile</h2>
-                <form action="{{ route('player.update', $player->id) }}" method="POST" enctype="multipart/form-data" class="space-y-4">
+                <form action="{{ route('player.update', compact('id')) }}" method="POST" enctype="multipart/form-data" class="space-y-4">
                     @csrf
                     @method('PATCH')
-                    <div>
-                        <label for="profile_picture" class="block text-gold mb-2">Profile Picture</label>
-                        <div class="flex items-center space-x-4">
-                            @if($player->profile_picture)
-                                <img src="{{ asset('storage/public/profile_pictures/' . $player->profile_picture) }}" alt="Current Profile" class="w-20 h-20 rounded-full">
-                            @else
-                                <img src="{{ asset('storage/public/photos/default-avatar.jpg') }}" alt="Default Avatar" class="w-20 h-20 rounded-full">
-                            @endif
-                            <input type="file" name="profile_picture" id="profile_picture" accept="image/*" class="input-field">
-                        </div>
-                    </div>
                     <div>
                         <label for="username" class="block text-gold mb-2">Username</label>
                         <input type="text" name="username" id="username" value="{{ $player->username }}" required class="input-field">
@@ -168,7 +152,7 @@
 
     <footer class="bg-footer-gradient py-6">
         <div class="container mx-auto text-center">
-            <p class="text-gold">&copy; 2025 PEP SEVEN. Designed with passion and creativity.</p>
+            <p class="text-gold">&copy; 2025 PEP SEVEN.</p>
         </div>
     </footer>
 </body>

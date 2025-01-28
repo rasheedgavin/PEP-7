@@ -41,7 +41,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M6 4v16h12V4H6zm2 2h8v12H8V6zm-2 0V4h12v2H6zm0 12h12v2H6v-2z"/>
                     </svg>
-                    <span>Read Novel</span>
+                    <span>Read Ibong Adarna</span>
                 </button>
             </div>
         </div>
@@ -106,7 +106,7 @@
             <p class="text-gold">&copy; 2025 PEP SEVEN.</p>
         </div>
     </footer>
-    
+
     <script>
         function redirectToProfileOrRoute(route) {
             if (!{{ $id }}) {

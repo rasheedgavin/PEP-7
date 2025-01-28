@@ -23,7 +23,7 @@
 
         <div class="container px-6 mx-auto text-center">
             <h1 class="text-5xl font-bold tracking-wide uppercase text-gold fade-in">
-                Ibong Adarna
+                Ibong Adarna Buod
             </h1>
             <p class="mt-2 text-lg italic text-cream fade-in">
                 Lakbayin ang panahon, isang kabanata sa bawat paglalakbay
