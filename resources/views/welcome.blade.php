@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login & Register</title>
     <style>
-        /* Basic reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body styling */
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            height: 100vh; /* Full viewport height */
+            height: 100vh; 
             color: #fff;
             justify-content: center;
             align-items: center;
@@ -24,15 +22,13 @@
             background: linear-gradient(90deg, rgba(47,19,9,1) 26%, rgba(58,28,9,1) 54%, rgba(98,41,6,1) 85%, rgba(255,0,74,0.8127626050420168) 100%);
         }
 
-        /* Main section styling */
         main {
             display: flex;
             width: 100%;
             height: 100%;
-            max-width: none; /* Allow it to stretch fully */
+            max-width: none; 
         }
 
-        /* Main content styling (65% width) */
         .main-content {
             flex: 65%;
             padding: 20px;
@@ -71,7 +67,6 @@
             }
         }
 
-        /* Aside section styling (35% width) */
         aside {
             flex: 35%;
             background-color: rgba(0, 0, 0, 0.92);
@@ -111,7 +106,6 @@
             background-color: #5c4033;
         }
 
-        /* Bottom centered PEP-7 text in aside */
         .aside-footer {
             margin-top: 30px;
             font-size: 1.5rem;
@@ -121,20 +115,18 @@
 </head>
 <body class="bg-body-gradient text-cream">
 <main>
-    <!-- Main Content -->
     <div class="main-content">
         <h1>PEP-7</h1>
         <p>Get ready to sharpen your mind and enjoy every word!</p>
     </div>
 
-    <!-- Aside Section -->
     <aside>
         <div>
             <h2>Access your account or create a new one to get started.</h2>
             <nav>
                 @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/dashboard') }}">Dashboard</a>
+                        <a href="{{ url('/dashboard') }}">Start</a>
                     @else
                         <a href="{{ route('login') }}">Log In</a>
                         @if (Route::has('register'))

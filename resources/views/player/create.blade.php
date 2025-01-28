@@ -45,9 +45,23 @@
     </style>
 </head>
 <body class="bg-body-gradient text-cream min-h-screen flex flex-col justify-center items-center">
+    
+    <header class="bg-header-gradient py-6 shadow-lg">
+        <div class="container mx-auto text-center relative">
+            <h1 class="text-gold text-4xl font-extrabold uppercase tracking-wide">Create Profile</h1>
+        </div>
+        <div class="absolute top-4 left-4 fade-in">
+            <button onclick="window.location='{{ route('dashboard') }}'"
+                class="flex items-center px-4 py-2 space-x-2 transition rounded-full shadow-lg btn-gradient text-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M10 19l-7-7 7-7v14zm4-14h8v14h-8V5z"/>
+                </svg>
+                <span>Back</span>
+            </button>
+        </div>
+    </header>
 
     <div class="w-full max-w-lg bg-header-gradient p-8 rounded-lg shadow-lg">
-        <h1 class="text-gold text-3xl font-bold mb-6 text-center">Create Player Profile</h1>
         
         <form action="{{ route('player.store') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
             @csrf
@@ -76,6 +90,12 @@
                 <button type="submit" class="btn-gradient text-dark px-6 py-3 rounded-full">Create Profile</button>
             </div>
         </form>
+        
+        <footer class="py-6 bg-footer-gradient">
+            <div class="container mx-auto text-center">
+                <p class="text-gold">&copy; 2025 PEP SEVEN.</p>
+            </div>
+        </footer>
     </div>
 
 </body>

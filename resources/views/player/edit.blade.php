@@ -168,7 +168,7 @@
 
     <footer class="bg-footer-gradient py-6">
         <div class="container mx-auto text-center">
-            <p class="text-gold">&copy; 2025 PEP SEVEN. Designed with passion and creativity.</p>
+            <p class="text-gold">&copy; 2025 PEP SEVEN.</p>
         </div>
     </footer>
 </body>
