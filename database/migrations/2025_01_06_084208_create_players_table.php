@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('players', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->string('profile_picture')->nullable();
             $table->string('username')->unique();
             $table->integer('year_level');
             $table->string('section');

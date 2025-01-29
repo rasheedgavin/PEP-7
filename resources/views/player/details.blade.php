@@ -77,30 +77,29 @@
     </header>
 
     <main class="container mx-auto px-6 py-12">
-        <div class="flex flex-col items-center text-center">
-            <div class="relative">
-                @if($player->profile_picture)
-                    <img src="{{ asset('storage/public/profile_pictures/' . $player->profile_picture) }}" alt="Profile Picture" class="rounded-full w-36 h-36 profile-picture mb-4">
-                @else
-                    <img src="{{ asset('storage/public/photos/default-avatar.jpg') }}" alt="Default Avatar" class="rounded-full w-36 h-36 profile-picture mb-4">
-                @endif
-            </div>
-
-            <h2 class="text-3xl font-bold text-gold mt-4">{{ $player->users->username }}</h2>
-
-            <button class="mt-6 btn-gradient text-dark px-6 py-2 rounded-full">
-                <a href="{{ route('player.edit', compact('id')) }}">Edit Profile</a>
-            </button>
-        </div>
-
         <div class="mt-12 w-full max-w-2xl mx-auto text-left">
-            <h2 class="text-3xl font-bold text-gold border-b border-gold pb-2">Profile Details</h2>
+            <h2 class="text-3xl font-bold text-gold border-b border-gold pb-2">Details</h2>
             <div class="mt-6">
                 <p class="text-lg"><strong class="text-gold">Name:</strong> {{ $player->users->name }}</p>
                 <p class="text-lg"><strong class="text-gold">Userame:</strong> {{ $player->username }}</p>
                 <p class="text-lg"><strong class="text-gold">Email:</strong> {{ $player->users->email }}</p>
                 <p class="text-lg"><strong class="text-gold">Year Level:</strong> {{ $player->year_level }}</p>
                 <p class="text-lg"><strong class="text-gold">Section:</strong> {{ $player->section }}</p>
+            </div>
+        </div>
+        <div class="flex flex-col items-center text-center">
+
+            <button class="mt-6 btn-gradient text-dark px-6 py-2 rounded-full">
+                <a href="{{ route('player.edit', compact('id')) }}">Edit Profile</a>
+            </button>
+        </div>
+        <div class="mt-12 w-full max-w-2xl mx-auto text-left">
+            <h2 class="text-3xl font-bold text-gold border-b border-gold pb-2">Scores</h2>
+            <div class="mt-6">
+                <p class="text-lg"><strong class="text-gold">Hangman:</strong>{{ $player->scores->hangman_score }}</p>
+                <p class="text-lg"><strong class="text-gold">Text Twister:</strong> {{ $player->scores->text_twister_score }}</p>
+                <p class="text-lg"><strong class="text-gold">Interactive Novel:</strong> {{ $player->scores->interactive_novel_score }}</p>
+                <p class="text-lg"><strong class="text-gold">Overall:</strong> {{ $player->scores->overall_score }}</p>
             </div>
         </div>
     </main>

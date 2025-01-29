@@ -27,21 +27,12 @@ class PlayerController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'profile_picture' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
             'username' => 'required|string|max:255|unique:players',
             'year_level' => 'required|integer',
             'section' => 'required|string|max:255',
         ]);
 
         $player = new Player();
-
-        if ($request->hasFile('profile_picture')) {
-            $file = $request->file('profile_picture');
-            $filename = time() . '.' . $file->getClientOriginalExtension();
-            $file->storeAs('public/profile_pictures', $filename);
-
-            $player->profile_picture = $filename;
-        }
 
         $player->user_id = Auth::id();
         $player->username = $validated['username'];
@@ -94,26 +85,12 @@ class PlayerController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'username' => 'required|string|max:255|unique:players',
             'year_level' => 'required|integer',
             'section' => 'required|string|max:255',
         ]);
 
         $player = Player::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
-
-        if ($request->hasFile('profile_picture')) {
-            if ($player->profile_picture) {
-                Storage::delete('public/profile_pictures/' . $player->profile_picture);
-            }
-
-            $file = $request->file('profile_picture');
-            $filename = time() . '.' . $file->getClientOriginalExtension();
-            $file->storeAs('public/profile_pictures', $filename);
-
-            $player->profile_picture = $filename;
-        }
-
         $player->username = $request->username;
         $player->year_level = $request->year_level;
         $player->section = $request->section;
