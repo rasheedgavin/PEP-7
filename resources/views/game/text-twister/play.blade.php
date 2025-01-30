@@ -162,7 +162,7 @@
 
             if (foundWords.has(word)) {
                 console.log('Word already found:', word);
-                return; // Avoid duplicate entries
+                return; 
             }
 
             console.log(`Checking word: "${word}" against ${levelData.words}`);

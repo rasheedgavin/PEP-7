@@ -150,7 +150,7 @@
                 },
             };
 
-            const category = "{{ $category }}";
+            let category = "{{ $category }}";
             let level = parseInt("{{ $level }}");
             let timeLeft = 60;
             let score = 0;
@@ -217,6 +217,12 @@
                 popup.style.display = 'block';
             }
 
+            function resetGame(){
+                displayLevel();
+                startTimer();
+                popup.display.style = 'none';
+            }
+
             function updateScores(playerId, score, category, level) {
                 const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '';
                 fetch('/increment/interactive-novel/score', {
@@ -243,6 +249,19 @@
                     .catch(err => console.error('Error:', err));
             }
 
+            function showPopup(message, showNextBtn = false) {
+                popupContent.textContent = message;
+                popup.style.display = 'block'; 
+                nextBtn.style.display = showNextBtn ? 'inline-block' : 'none'; 
+    }
+
+            answerButtons.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const choice = btn.getAttribute('data-choice');
+                    checkAnswer(choice);
+                });
+            });
+
             nextBtn.addEventListener('click', function () {
                 popup.style.display = 'none';
 
@@ -266,20 +285,7 @@
                 window.location.href = newUrl;
             });
 
-            function showPopup(message, showNextBtn = false) {
-                popupContent.textContent = message;
-                popup.style.display = 'block'; 
-                nextBtn.style.display = showNextBtn ? 'inline-block' : 'none'; 
-            }
-
-            answerButtons.forEach((btn) => {
-                btn.addEventListener('click', () => {
-                    const choice = btn.getAttribute('data-choice');
-                    checkAnswer(choice);
-                });
-            });
-
-            displayLevel();
+            resetGame();
         });
     </script>
 </body>
