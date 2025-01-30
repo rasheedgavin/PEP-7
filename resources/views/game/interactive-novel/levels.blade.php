@@ -27,7 +27,7 @@
                 {{ ucfirst($category) }} Levels
             </h1>
             <div class="mt-4 flex justify-center space-x-4">
-                <button onclick="window.location.href='{{ route('hangman.categories') }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
+                <button onclick="window.location.href='{{ route('interactive-novel.categories') }}'" class="btn-gradient text-dark py-2 px-6 rounded-full shadow-lg">
                     Categories
                 </button>
             </div>

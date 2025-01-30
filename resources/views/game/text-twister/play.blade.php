@@ -263,8 +263,10 @@
             if (level > 10) {
                 if (category === 'easy') {
                     category = 'medium'; 
+                    level = 1
                 } else if (category === 'medium') {
                     category = 'hard'; 
+                    level = 1
                 } else {
                     showPopup('Congratulations! You completed all levels!', false);
                     return; 

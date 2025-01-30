@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\Score;
 use App\Models\Player;
+use App\Models\Score;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ScoreFactory extends Factory

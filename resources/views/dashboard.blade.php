@@ -98,24 +98,6 @@
                     </button>
                 </div>
             </div>
-
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mt-6">
-                <div class="p-6 text-gray-900">
-                    <h3 class="font-semibold text-lg text-gray-800 leading-tight">Game Projects</h3>
-
-                    <ul class="mt-4 list-disc list-inside">
-                        <li class="mt-2">
-                            <a href="{{ route('games.hangman') }}" class="text-blue-500 hover:underline">Hangman</a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="{{ route('games.interactive-novel') }}" class="text-blue-500 hover:underline">Interactive Novel</a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="{{ route('games.text-twister') }}" class="text-blue-500 hover:underline">Text Twister</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </main>
 

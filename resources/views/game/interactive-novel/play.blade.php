@@ -250,8 +250,10 @@
                 if (level > 5) {
                     if (category === 'easy') {
                         category = 'medium';
+                        level = 1
                     } else if (category === 'medium') {
                         category = 'hard';
+                        level = 1
                     } else {
                         showPopup('Congratulations! You completed all levels!', false);
                         return;
@@ -263,6 +265,12 @@
                 const newUrl = `/interactive-novel/${category}/${level}`;
                 window.location.href = newUrl;
             });
+
+            function showPopup(message, showNextBtn = false) {
+                popupContent.textContent = message;
+                popup.style.display = 'block'; 
+                nextBtn.style.display = showNextBtn ? 'inline-block' : 'none'; 
+            }
 
             answerButtons.forEach((btn) => {
                 btn.addEventListener('click', () => {

@@ -29,7 +29,7 @@ class ScoreController extends Controller
             if ($progress->{$currentLevelKey} < $request->level) {
                 $progress->{$currentLevelKey} = $request->level;
 
-                if ($request->level == 10) {
+                if ($request->level == 15) {
                     $progress->{$completeKey} = true;
                 }
 
@@ -99,7 +99,7 @@ class ScoreController extends Controller
             if ($progress->{$currentLevelKey} < $request->level) {
                 $progress->{$currentLevelKey} = $request->level;
 
-                if ($request->level == 10) {
+                if ($request->level == 5) {
                     $progress->{$completeKey} = true;
                 }
 
@@ -109,7 +109,7 @@ class ScoreController extends Controller
 
         return response()->json([
             'success' => true,
-            'new_text_twister_score' => $player->scores->interactive_novel_score,
+            'new_interactive_novel_score' => $player->scores->interactive_novel_score,
         ]);
     }
 

@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handleNextLevel() {
         const newLevel = gameState.level + 1;
-        if (newLevel > 10) {
+        if (newLevel > 15) {
             if (gameState.category === 'easy') {
                 gameState.category = 'medium';
                 gameState.level = 1;

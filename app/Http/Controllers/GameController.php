@@ -43,7 +43,7 @@ class GameController extends Controller
         }
 
         $validCategories = ['easy', 'medium', 'hard'];
-        if (!in_array($category, $validCategories) || $level < 1 || $level > 10) {
+        if (!in_array($category, $validCategories) || $level < 1 || $level > 15) {
             abort(404, 'Invalid level or category');
         }
 
@@ -162,7 +162,7 @@ class GameController extends Controller
     
         $validCategories = ['easy', 'medium', 'hard'];
     
-        if (!in_array($category, $validCategories) || $level < 1 || $level > 10) {
+        if (!in_array($category, $validCategories) || $level < 1 || $level > 5) {
             abort(404, 'Invalid level or category');
         }
         
@@ -171,7 +171,7 @@ class GameController extends Controller
         $unlockedLevel = $progress->{$unlockedLevelKey} ?? 0;
 
         if ($level > $unlockedLevel + 1) {
-            return redirect()->route('hangman.levels', $category)->with('error', 'Complete previous levels first.');
+            return redirect()->route('interactive-novel.levels', $category)->with('error', 'Complete previous levels first.');
         }
 
         return view('game.interactive-novel.play', compact('player', 'category', 'level', 'progress'));
