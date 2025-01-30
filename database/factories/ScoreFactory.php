@@ -23,7 +23,7 @@ class ScoreFactory extends Factory
     public function definition()
     {
         return [
-            'player_id' => Player::inRandomOrder()->first()->id, // Random player
+            'player_id' => Player::inRandomOrder()->first()->id, 
             'overall_score' => $this->faker->numberBetween(1, 100),
             'hangman_score' => $this->faker->numberBetween(1, 100),
             'text_twister_score' => $this->faker->numberBetween(1, 100),

@@ -76,16 +76,7 @@
     </header>
 
     <main class="container mx-auto px-6 py-12 space-y-16">
-
-        <section class="text-center">
-            <div class="flex flex-col items-center">
-                <h2 class="text-3xl font-bold text-gold">{{ $player->users->username }}</h2>
-                <p class="text-lg mt-2"><strong class="text-gold">Email:</strong> {{ $player->users->email }}</p>
-                <p class="text-lg"><strong class="text-gold">Year Level:</strong> {{ $player->year_level }}</p>
-                <p class="text-lg"><strong class="text-gold">Section:</strong> {{ $player->section }}</p>
-            </div>
-        </section>
-
+        
         <section id="edit-profile" class="space-y-8">
             <section class="bg-header-gradient p-6 rounded-lg shadow-lg">
                 <h2 class="text-gold text-2xl font-bold mb-4">Edit Profile</h2>
